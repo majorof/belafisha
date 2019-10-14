@@ -46,4 +46,40 @@ $('.show_more_btn').click (function() {
 	$('.show_more_data').fadeIn();
 })
 
+
+//Центрирование большого баннера под ивентами
+$(function () {
+  $('.events_big_banner>img').css({
+    marginTop: -0.5*$('.events_big_banner>img').height()+'px',
+    marginLeft: -0.5*$('.events_big_banner>img').width()+'px'
+  });
+});
+
+//Форма логина
+$('.login_btn').click (function() {
+	$('.login').fadeIn();
+});
+$('.login_close').click (function() {
+	$('.login').fadeOut();
+});
+
+//Переключалка табов
+(function(s) {
+    var n;
+    s(".login_position>ul").on("click", "li:not(.active)", function() {
+        n = s(this).parents(".login_position"), s(this).dmtabs(n)
+    }), s.fn.dmtabs = function(n) {
+        s(this).addClass("active").siblings().removeClass("active"), n.find("form").eq(s(this).index()).show(1, function() {
+            s(this).addClass("open_form")
+        }).siblings("form").hide(1, function() {
+            s(this).removeClass("open_form")
+        })
+    }
+})(jQuery);
+
+//Маска для номера телефона в инпут
+jQuery(function($) {
+$(".registration_phone_input").mask("+7 (999) 999-99-99");
+});
+
 });

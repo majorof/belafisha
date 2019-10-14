@@ -19,11 +19,56 @@
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/pickmeup.js"></script>
+<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 
 </head>
 <body>
+	<section class="login" style="display:none;">
+		<div class="login_container">
+			<div class="login_position">
+			<a class="login_close"></a>
+				<ul>
+					<li id="login_navigarion" class="active">Авторизация</li>
+					<li id="registration_navigation">Регистрация</li>
+				</ul>
+				<div class="login_form_container">
+					<div class="login_form_wrapper">
+						<p class="login_form_title">Введите данные</p>
+						<form id="login_form" class="login_form open_form">
+							<div class="login_form_block">
+								<input type="text" placeholder="email или телефон" />
+								<input type="password" placeholder="пароль" />
+								<a href="" class="">Забыли пароль?</a>
+								<input class="login_form_btn top_40" type="button" value="Войти" />
+							</div>
+						</form>
+						<form id="registration_form" class="login_form">
+							<div class="login_form_block">
+								<input type="text" placeholder="ФИО" />
+								<input type="text" placeholder="email" />
+								<input type="password" placeholder="пароль" />
+								<input type="password" placeholder="повторите пароль" />
+								<input type="text" class="registration_phone_input" placeholder="+7 (___) ___-__-__" />
+								<p>в течение 5 минут Вам придет код в СМС сообщении</p>
+								<input class="auth_code" type="text" placeholder="код из СМС" />
+								<a href="">Выслать код повторно через <span>60</span> сек.</a>
+							</div>
+							<div class="agreed top_20">
+								<label>
+									<input type="checkbox" checked>
+									<div class="checkbox_custom"></div>
+								</label>
+								<span>Я согласен на обработку персональных данных</span>
+							</div>
+							<input class="registration_form_btn top_40" type="button" value="Зарегистрироваться" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<section class="bg">
-		<header class="container_950">
+		<header class="container_950 overflow_hidden">
 			<div class="wrapper">
 				<div class="grid_7">
 					<a href="index.html" class="logo">
@@ -48,10 +93,10 @@
 				<div class="grid_3">
 					<ul class="user_nav">
 						<li>
-							<a href="" class="login_btn">Войти</a>
+							<a class="login_btn">Войти</a>
 						</li>
 						<li>
-							<div href="" class="shopping_cart">
+							<div class="shopping_cart">
 								<span>0</span>
 							</div>
 						</li>
@@ -112,7 +157,7 @@
 			</div>
 		</div>
 		<div class="banners container_1200">
-			<div class="wrapper">
+			<div class="wrapper_1200">
 				<div class="grid_6_m0">
 					<a href="" class="banner">
 						<div></div>
@@ -141,7 +186,7 @@
 		</div>
 		<div class="popular_events">
 			<h1>Популярные события</h1>
-			<div class="container_950">
+			<div class="container_950 overflow_hidden">
 				<div class="wrapper">
 					<div class="grid_3 bottom_40">
 						<div class="event_container">
@@ -153,7 +198,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -168,7 +213,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -183,7 +228,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -198,7 +243,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -213,7 +258,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -228,7 +273,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -243,7 +288,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -258,7 +303,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -273,7 +318,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -288,7 +333,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -303,7 +348,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -318,7 +363,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -333,7 +378,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -348,7 +393,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -363,21 +408,21 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="container_950">
+			<div class="container_950 overflow_hidden">
 				<div class="wrapper">
 					<div class="grid_19 bottom_40">
-						<a href=""><img src="img/big_event_01.png" /></a>
+						<a href="" class="events_big_banner"><img src="img/big_event_01.png" /></a>
 					</div>				
 				</div>
 			</div>
-			<div class="container_950 show_more_data">
+			<div class="container_950 overflow_hidden show_more_data">
 				<div class="wrapper">
 					<div class="grid_3 bottom_40">
 						<div class="event_container">
@@ -389,7 +434,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -404,7 +449,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -419,7 +464,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -434,7 +479,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -449,7 +494,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -464,7 +509,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -479,7 +524,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -494,7 +539,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -509,7 +554,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -524,7 +569,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -539,7 +584,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -554,7 +599,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -569,7 +614,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -584,7 +629,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -599,7 +644,7 @@
 									<p class="event_date">12 ноября</p>
 									<p class="event_place" title="Новая сцена ЛДМ">Новая сцена ЛДМ</p>
 									<p class="event_price" title="Билеты от 10500 р.">Билеты от 10500 <span>Р</span></p>
-									<a href="" class="event_order_btn">Быстрая покупка</a>
+									<a href="" class="event_order_btn" title="Быстрая покупка">Быстрая покупка</a>
 								</div>
 							</div>						
 						</div>
@@ -610,7 +655,7 @@
 				<a class="show_more_btn bottom_40">Показать еще</a>
 			</div>
 		</div>
-		<footer class="container_1200">
+		<footer>
 			<div class="container_950">
 				<a class="page_up">
 					<svg width="8" height="17" viewBox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -618,7 +663,7 @@
 					</svg>
 				</a>
 			</div>
-			<div class="container_950">
+			<div class="container_950 overflow_hidden">
 				<div class="wrapper">
 					<div class="grid_12">
 						<div class="footer_nav">
