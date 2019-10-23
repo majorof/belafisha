@@ -21,7 +21,7 @@ input[type="number"]:focus { outline: none; }
 input[type="submit"]:focus { outline: none; }
 textarea:focus { outline: none; }
 
-.clearfix:after, .clearfix:before {display: table;content: " ";}
+.clearfix:after, .clearfix:before {display: table;content: "";}
 
 h1{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:21px;text-align:center;color:#fff;padding:32px 0;}
 h2{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:18px;text-align:center;color:#fff;padding:32px 0;}
@@ -217,18 +217,18 @@ header{height:116px;}
 	.filter_reset{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color:#fff;cursor:pointer;position:absolute;right:0;top:0;line-height:42px;}
 	.filter_reset:before{content:'x';margin-right:3px;}
 	.catalog_filter_container div ul li>ul, .catalog_filter_container div ul li div.catalog_playground_container{padding:0 20px;}
-	
+
 	.catalog_filter_container div ul li>ul, .catalog_filter_container div ul li div.catalog_calendar, .catalog_filter_container div ul li div.catalog_filter_price_container, .catalog_filter_container div ul li div.catalog_playground_container{opacity:0;position:absolute;background:#0B0702;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color:#fff;}
-	
+
 	.catalog_filter_container div ul li>ul li{display:block;margin-right:0;}
 	.catalog_filter_container div ul li>ul li a{padding:0 5px 5px 5px;}
 	.catalog_filter_container div ul li>ul li a.active{border-bottom:1px solid #F69707;}
 	.catalog_filter_container div ul li>ul li a:hover{border-bottom:1px solid #F69707;}
-	
+
 	.catalog_filter_container div ul>li:hover ul, .catalog_filter_container div ul li:hover div.catalog_calendar, .catalog_filter_container div ul li:hover div.catalog_filter_price_container, .catalog_filter_container div ul li:hover div.catalog_playground_container{opacity:1;z-index:1;display:block;}
-	
+
 	.catalog_filter_price_container{width:350px;padding:25px;}
-	
+
 	.catalog_playground_container {width:550px;box-sizing:border-box;padding-bottom:20px !important;height:390px;overflow:hidden;}
 	.catalog_playground_input_container input{width:100%;height:30px;background: #fff;border: .75px solid #F69707;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:11px;color:#464545;padding-left: 10px;box-sizing:border-box;}
 	.catalog_playgrounds_values {display: -ms-flexbox;display: flex;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-ms-flex-pack: distribute;justify-content: space-around;-ms-flex-align: stretch;align-items: stretch;-ms-flex-line-pack: stretch;align-content: stretch;padding: 10px 0;max-height:250px;}
@@ -240,7 +240,7 @@ header{height:116px;}
 	.catalog_playground_input_container{width:54%;padding:20px 0;position:relative;}
 
 	/* --> Страница события */
-	
+
 	.event_page{background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);position: relative;}
 	.event_page_event_info ul{list-style:none;}
 	.event_page_event_info ul li:first-child{width:190px;overflow:hidden;margin-bottom:0;}
@@ -272,9 +272,9 @@ header{height:116px;}
 	.ui-state-disabled{opacity: .35;}
 	.ui-corner-all{cursor:pointer;}
 	.ui-datepicker-next{float:right;}
-	
+
 	/* --> Страница Организатора */
-	
+
 	.organizer_page{background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);position: relative;}
 	.organizer_page_organizer_info ul{list-style:none;}
 	.organizer_page_organizer_info ul li:first-child{width:190px;overflow:hidden;margin-bottom:0;}
@@ -285,12 +285,12 @@ header{height:116px;}
 	.organizer_page_organizer_info ul>li>p>a{color:#fff;}
 	.organizer_page_organizer_info ul>li>p.organizer_title{font-size:12px;}
 	.organizer_page_organizer_btns_container{width:190px;float:right;}
-	
+
 	.organizer_page_description p{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#fff;margin-bottom:10px;line-height:18px;}
 	.organizer_page_description ul{list-style:none;margin-bottom:10px;}
 	.organizer_page_description ul li{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#fff;line-height:18px;}
 	.organizer_page_description_container a{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#fff;line-height:36px;border-bottom:1px dashed #fff;cursor:pointer;}
-	
+
 /*Подвал*/
 .page_up{position: absolute;right: -25px;top: -91px;z-index: 100;width: 17px;height: 17px;text-align: center;cursor:pointer;}
 footer{background:#000;padding:30px 0;border-top: 2px solid #F69707;}
@@ -368,6 +368,7 @@ footer{background:#000;padding:30px 0;border-top: 2px solid #F69707;}
 
 	/* --> Страница события */
 	.event_page_event_info ul li:nth-child(2){margin-left:45px;width:200px;}
+  .organizer_page_organizer_info ul li:nth-child(2){width:215px;}
 
 .event_order_btn{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
 
@@ -441,6 +442,7 @@ footer{background:#000;padding:30px 0;border-top: 2px solid #F69707;}
 
 	/* --> Страница события */
 	.event_page_event_info ul li:nth-child(2){margin-left:10px;width:200px;}
+  .organizer_page_organizer_info ul li:nth-child(2){width:180px;}
 
 /*Подвал*/
 .page_up{display:none;}
@@ -593,7 +595,20 @@ header{height:50px;background:#000;position:relative;}
 	.event_page_event_info ul>li>p.event_title{font-size:18px;}
 	.event_page_feedbacks_container{margin:0 30px;}
 	.event_page_feedbacks_form_container{margin:0 30px;}
-	
+
+  /* --> Страница организатора */
+  .organizer_page_organizer_info ul li:first-child {width: 100px;}
+  .organizer_page_organizer_info{width:auto;min-width:420px;margin:0 auto;padding:0 30px;}
+  .organizer_page_organizer_info ul li:nth-child(2){width:300px;margin-left:15px;}
+	.organizer_page_organizer_info ul>li>p>img{width:100%;}
+  .organizer_page_organizer_btns_container{width:auto;margin:0 auto;float:none;padding:0 30px;}
+  .organizer_page_organizer_btns_container div{display:inline-block;}
+  .organizer_page_organizer_info ul>li>p{font-size:16px;line-height:24px;}
+	.organizer_page_organizer_info ul>li>p.organizer_title{font-size:18px;}
+
+  .organizer_page_description_container{padding:0 30px;}
+  .organizer_page_description p{font-size: 16px;line-height: 24px;}
+
 	/* --> Каталог*/
 	.catalog_description p{font-size:16px;line-height:28px;padding:0 30px;}
 	.popular_events{background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);position:relative;}
@@ -755,12 +770,22 @@ header{height:50px;background:#000;position:relative;min-width:320px;}
 	/* --> Страница события */
 	.event_page_event_info ul li:first-child {width: 80px;}
 	.event_page_event_info{min-width:260px;padding:0 30px;}
-	.event_page_event_info ul>li>p.event_title{font-size:14px;}
-	.event_page_event_info ul>li>p{font-size:12px;line-height:18px;}
+	.event_page_event_info ul>li>p.event_title{font-size:18px;line-height: 24px;}
+	.event_page_event_info ul>li>p{font-size:16px;line-height:24px;}
 	.event_page_event_info ul li:nth-child(2){width:160px;}
 	.event_page_event_btns_container div:nth-child(2){width:120px;}
 	.event_page_description{min-width:260px;padding:0 30px;}
 	.event_page_event_info .event_price{white-space: unset;}
+
+  /* --> Страница события */
+  .organizer_page_organizer_info ul li:first-child {width: 80px;}
+  .organizer_page_organizer_info{min-width:260px;padding:0 30px;}
+  .organizer_page_organizer_info ul>li>p.event_title{font-size:18px;line-height: 24px;}
+  .organizer_page_organizer_info ul>li>p{font-size:16px;line-height:24px;}
+  .organizer_page_organizer_info ul li:nth-child(2){width:160px;}
+  .organizer_page_organizer_btns_container div:nth-child(2){width:120px;}
+  .organizer_page_description{min-width:260px;}
+  .organizer_page_organizer_info .organizer_price{white-space: unset;}
 
 /*Подвал*/
 .footer_nav{display:none;}
