@@ -2,8 +2,13 @@
 .pickmeup *{-moz-box-sizing:border-box;box-sizing:border-box}
 .pickmeup.pmu-flat{position:relative}
 .pickmeup.pmu-hidden{display:none}
-.pickmeup .pmu-instance{display:inline-block;height:16em;padding:.5em 1.9em;text-align:center;width:17em;}
-.pickmeup .pmu-instance .pmu-button{color:#fff;cursor:pointer;outline:none;text-decoration:none;font-family: 'Montserrat', sans-serif;font-weight:600;font-size:15px;text-align:center;}
+
+.main_menu .pickmeup .pmu-instance{display:inline-block;height:16em;padding:.5em 1.9em;text-align:center;width:17.3em;}
+.catalog_filter_container .pickmeup .pmu-instance{display:inline-block;height:330px;padding:15px 30px;text-align:center;width:228px;}
+
+.main_menu .pickmeup .pmu-instance .pmu-button{color:#fff;cursor:pointer;outline:none;text-decoration:none;font-family: 'Montserrat', sans-serif;font-weight:600;font-size:15px;text-align:center;}
+.catalog_filter_container .pickmeup .pmu-instance .pmu-button{color:#fff;cursor:pointer;outline:none;text-decoration:none;font-family: 'Montserrat', sans-serif;font-weight:600;font-size:12px;text-align:center;vertical-align:bottom;width:24px;}
+
 .pickmeup .pmu-instance .pmu-today{color:#F69707}
 .pickmeup .pmu-instance .pmu-button:hover{background:transparent;color:#F69707}
 
@@ -11,13 +16,22 @@
 .pickmeup .pmu-instance .pmu-disabled,.pickmeup .pmu-instance .pmu-disabled:hover{color:#333;cursor:default}
 .pickmeup .pmu-instance .pmu-selected{background: rgba(255, 255, 255, 0.2);color:#fff;border-radius: 6px;}
 .pickmeup .pmu-instance .pmu-not-in-month.pmu-selected{background:#17384d}
-.pickmeup .pmu-instance nav{color:#eee;display:-ms-flexbox;display:-webkit-flex;display:flex;line-height:2em}
+
+.main_menu .pickmeup .pmu-instance nav{color:#eee;display:-ms-flexbox;display:-webkit-flex;display:flex;line-height:2em;}
+.catalog_filter_container .pickmeup .pmu-instance nav{color:#eee;display:-ms-flexbox;display:-webkit-flex;display:flex;line-height:2em;margin-bottom:10px;}
+.catalog_filter_container .pickmeup .pmu-instance nav.pmu-day-of-week{margin-bottom:0px;}
+
 .pickmeup .pmu-instance nav *:first-child :hover{color:#F69707}
 .pickmeup .pmu-instance nav .pmu-prev,.pickmeup .pmu-instance nav .pmu-next{display:none;height:2em;width:1em}
 .pickmeup .pmu-instance nav .pmu-month{width:14em}
-.pickmeup .pmu-instance .pmu-years *,.pickmeup .pmu-instance .pmu-months *{display:inline-block;line-height:3.6em;width:3.5em}
-.pickmeup .pmu-instance .pmu-day-of-week{color:#fff;cursor:default;font-family: 'Montserrat', sans-serif;font-weight:600;font-size:15px;text-align:center;}
-.pickmeup .pmu-instance .pmu-day-of-week *,.pickmeup .pmu-instance .pmu-days *{display:inline-block;line-height:2em;width:2em}
+.pickmeup .pmu-instance .pmu-years *,.pickmeup .pmu-instance .pmu-months *{display:inline-block;line-height:3.6em;width:3.5em !important;}
+
+.main_menu .pickmeup .pmu-instance .pmu-day-of-week{color:#fff;cursor:default;font-family: 'Montserrat', sans-serif;font-weight:600;font-size:15px;text-align:center;}
+.catalog_filter_container .pickmeup .pmu-instance .pmu-day-of-week{color:#fff;cursor:default;font-family: 'Montserrat', sans-serif;font-weight:600;font-size:10px;text-align:center;}
+
+.main_menu .pickmeup .pmu-instance .pmu-day-of-week *,.pickmeup .pmu-instance .pmu-days *{display:inline-block;line-height:2em;width:2em}
+.catalog_filter_container .pickmeup .pmu-instance .pmu-day-of-week *,.pickmeup .pmu-instance .pmu-days *{display:inline-block;line-height:2em;width:2.4em;}
+
 .pickmeup .pmu-instance .pmu-day-of-week *{line-height:2em;text-align:center;}
 .pickmeup .pmu-instance:first-child .pmu-prev,.pickmeup .pmu-instance:last-child .pmu-next{display:block}
 .pmu-prev{display:block;background:url(../img/calendar_arrow_left.png) center center no-repeat;}
@@ -25,5 +39,8 @@
 .pmu-next{display:block;background:url(../img/calendar_arrow_right.png) center center no-repeat;}
 .pickmeup .pmu-instance .pmu-next:hover{display:block;background:url(../img/calendar_arrow_right_hvr.png) center center no-repeat;}
 .pickmeup .pmu-instance:first-child .pmu-month,.pickmeup .pmu-instance:last-child .pmu-month{width:13em}
-.pickmeup .pmu-instance:first-child:last-child .pmu-month{width:12em}
+
+.main_menu .pickmeup .pmu-instance:first-child:last-child .pmu-month{width:12em;line-height:30px;}
+.catalog_filter_container .pickmeup .pmu-instance:first-child:last-child .pmu-month{width:12em;line-height:24px;}
+
 .pickmeup:not(.pmu-view-days) .pmu-days,.pickmeup:not(.pmu-view-days) .pmu-day-of-week,.pickmeup:not(.pmu-view-months) .pmu-months,.pickmeup:not(.pmu-view-years) .pmu-years{display:none}

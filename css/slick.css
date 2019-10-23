@@ -2,7 +2,8 @@
 .slick-slider
 {
     position: relative;
-	
+	max-width:1200px;
+	margin:0 auto;
     display: block;
     box-sizing: border-box;
 
@@ -121,7 +122,7 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
-.slick-dots{position:absolute;bottom:15px; left: 50%;-webkit-transform: translate(0, -50%);transform: translate(0, -50%);list-style:none;}
+.slick-dots{position:absolute;bottom:15px;width:100%;text-align:center;-webkit-transform: translate(0, -50%);transform: translate(0, -50%);list-style:none;}
 .slick-dots li{display:inline-block;margin:0 4px;width:7px;height:7px;border-radius:4px;background:#D8D7D7;cursor:pointer;}
 .slick-dots li button{display:none;}
 .slick-dots li.slick-active{background:#F69707;}
