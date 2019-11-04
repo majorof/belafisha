@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Моя афиша Беларусь</title>
+<meta name="keywords" lang="ru" content="" />
+<meta name="description" lang="ru" content="" />
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+<link rel="stylesheet" type="text/css" href="css/datepicker.min.css"/>
+<link rel="icon" href="favicon.png" type="image/x-icon" />
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap&subset=cyrillic" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.12.1.js"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="js/readmore.min.js"></script>
+<script type="text/javascript" src="js/datepicker.min.js"></script>
+<script type="text/javascript" src="js/panzoom.js"></script>
+
+</head>
+<body>
+	<section class="popup_menu" style="display:none;">
+		<div class="popup_menu_container">
+			<a class="popup_menu_close"></a>
+			<div>
+				<a href="" class="geolocation_btn">Санкт-Петербург</a>
+			</div>
+			<div>
+				<ul>
+					<li><a href="">Войти</a></li>
+					<li><a href="">Регистрация</a></li>
+				</ul>
+			</div>
+			<div>
+				<ul>
+					<li><a href="">Публичная оферта</a></li>
+					<li><a href="">FAQ</a></li>
+					<li><a href="">Организаторам</a></li>
+					<li><a href="">Политика конфиденциальности</a></li>
+					<li><a href="">Корпоративным клиентам</a></li>
+					<li><a href="">Подарочный сертификат</a></li>
+					<li><a href="">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="search" style="display:none;">
+		<div class="search_container">
+			<div class="search_position">
+				<a class="search_close"></a>
+				<form>
+					<div class="search_input_container">
+						<input class="white_input_placeholder" type="text" placeholder="Введите событие или место" />
+					</div>
+					<input class="search_form_btn" type="button" value="Найти билет" />
+				</form>
+			</div>
+		</div>
+	</section>
+	<section class="login" style="display:none;">
+		<div class="login_container">
+			<div class="login_position">
+			<a class="login_close"></a>
+				<ul>
+					<li id="login_navigarion" class="active">Авторизация</li>
+					<li id="registration_navigation">Регистрация</li>
+				</ul>
+				<div class="login_form_container">
+					<div class="login_form_wrapper">
+						<p class="login_form_title">Введите данные</p>
+						<form id="login_form" class="login_form open_form">
+							<div class="login_form_block">
+								<input class="white_input_placeholder" type="text" placeholder="email или телефон" />
+								<input class="white_input_placeholder" type="password" placeholder="пароль" />
+								<a href="" class="forget_pwd">Забыли пароль?</a>
+								<span class="between_fpwd_ca"></span>
+								<a class="create_accaunt">Создать аккаунт</a>
+								<input class="login_form_btn" type="button" value="Войти" />
+							</div>
+						</form>
+						<form id="registration_form" class="login_form">
+							<div class="login_form_block">
+								<input class="white_input_placeholder" type="text" placeholder="ФИО" />
+								<input class="white_input_placeholder" type="text" placeholder="email" />
+								<input class="white_input_placeholder" type="password" placeholder="пароль" />
+								<input class="white_input_placeholder" type="password" placeholder="повторите пароль" />
+								<input class="white_input_placeholder" type="text" class="registration_phone_input" placeholder="+7 (___) ___-__-__" />
+								<p>в течение 5 минут Вам придет код в СМС сообщении</p>
+								<input class="white_input_placeholder" class="auth_code" type="text" placeholder="код из СМС" />
+								<a href="">Выслать код повторно через <span>60</span> сек.</a>
+							</div>
+							<div class="agreed top_20">
+								<label>
+									<div>
+										<input type="checkbox" checked>
+										<div class="checkbox_custom"></div>
+									</div>
+									<span>Я согласен на обработку персональных данных</span>
+								</label>
+							</div>
+							<input class="registration_form_btn" type="button" value="Зарегистрироваться" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bg">
+		<header class="container_950 overflow_hidden header_desctop">
+			<div class="wrapper">
+				<div class="grid_7">
+
+						<div class="logo_container">
+							<ul>
+								<li><a>Санкт-Петербург</a></li>
+								<li>
+									<ul>
+										<li><a class="active">Рус</a></li>
+										<li><a>Eng</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="logo_container">
+							<a href="index.html" class="logo"><img src="img/logo.png" alt="" /></a>
+						</div>
+
+				</div>
+				<div class="grid_7">
+					<ul class="header_nav">
+						<li><a href="">Площадки</a></li>
+						<li><a href="">Организаторы</a></li>
+						<li><a href="">Доставка</a></li>
+					</ul>
+					<div class="site_search">
+						<input type="search" placeholder="Искать" />
+						<div class="site_search_btn">
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path opacity="0.54" fill-rule="evenodd" clip-rule="evenodd" d="M10.0073 8.80453H9.37176L9.15083 8.58522C9.93128 7.67515 10.4059 6.49534 10.4059 5.20268C10.4059 2.3292 8.07662 0 5.20297 0C2.32933 0 0 2.3292 0 5.20268C0 8.07615 2.32933 10.4054 5.20297 10.4054C6.49571 10.4054 7.67479 9.93151 8.58491 9.15191L8.80583 9.37122V10.0051L12.8065 14L14 12.8066L10.0073 8.80453ZM5.20295 8.80453C3.21301 8.80453 1.60089 7.1925 1.60089 5.20268C1.60089 3.21365 3.21301 1.60082 5.20295 1.60082C7.19209 1.60082 8.80501 3.21365 8.80501 5.20268C8.80501 7.1925 7.19209 8.80453 5.20295 8.80453Z" fill="#766D6D"/>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<ul class="user_nav">
+						<li>
+							<a class="login_btn">Войти</a>
+						</li>
+						<li>
+							<div class="shopping_cart">
+								<span>0</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<header class="header_modile">
+			<a class="buter"></a>
+			<a href="index.html" class="logo">
+				<img src="img/logo.png" alt="" />
+			</a>
+			<ul>
+				<li><a class="header_modile_search"></a></li>
+				<li><a class="header_modile_login"></a></li>
+				<li>
+					<div class="shopping_cart">
+						<span>0</span>
+					</div>
+				</li>
+			</ul>
+		</header>
+		<nav class="main_menu">
+			<div class="container_950">
+				<div class="menu_scroll_container">
+					<div class="menu_scroll">
+							<ul>
+								<li><a href="catalog.html">Театр</a></li>
+								<li><a href="catalog.html">Концерт</a></li>
+								<li><a href="catalog.html">Детям</a></li>
+								<li><a href="catalog.html">Фестивали</a></li>
+								<li><a href="catalog.html">Спорт</a></li>
+								<li><a href="catalog.html">Туристам</a></li>
+								<li><a href="catalog.htmlcatalog.html">Другое</a></li>
+								<li><a href="">Кино</a></li>
+								<li><a href="catalog.html">Акции</a></li>
+							</ul>
+						</ul>
+						<div class="calendar_container">
+							<a id="calendar_btn" class="calendar_vdwn">Календарь мероприятий</a>
+							<div class="calendar">
+								<div class="datepicker-here" data-multiple-dates="999"></div>
+								<input type="button" class="btn top_40" value="Найти билеты">
+							</div>
+						</div>
+					</div>
+				</div>
+		</nav>
+		<div class="hall_menu_fix">
+			<div class="container_950">
+				<div class="hall_container_questionaire top_40 bottom_40">
+					<h2>Для оформления заказа необходимо заполнить анкету</h2>
+					<form id="questionnaire" action="cart/index.html">
+						<label><span>Ваше имя</span><input type="text" placeholder="Введите ответ"/></label>
+						<label><span>Ваша фамилия</span><input type="text" placeholder="Введите ответ"/></label>
+						<label><span>E-mail</span><input type="text" placeholder="Введите ответ"/></label>
+						<label><span>Дата последнего посещения</span><input class="datepicker-here" type="text" placeholder="Введите ответ" data-auto-close="true" /></label>
+							<div class="questionnaire_select">
+								<span>Выберите вариант</span>
+								<div class="questionnaire_select_container questionnaire_select_container_vdwn">
+									<p>-</p>
+								</div>
+								<div class="questionnaire_select_data">
+									<div class="user_agreed">
+										<label>
+											<div>
+												<input type="checkbox" checked="" name="poll_01" />
+												<div class="checkbox_custom"></div>
+											</div>
+											<span>Да</span>
+										</label>
+									</div>
+									<div class="user_agreed">
+										<label>
+											<div>
+												<input type="checkbox" checked="" name="poll_01" />
+												<div class="checkbox_custom"></div>
+											</div>
+											<span>Нет</span>
+										</label>
+									</div>
+									<div class="user_agreed">
+										<label>
+											<div>
+												<input type="checkbox" name="poll_01" />
+												<div class="checkbox_custom"></div>
+											</div>
+											<span>Не знаю</span>
+										</label>
+									</div>
+									<label>
+									<label>
+										<input name="poll_02" type="radio">хочу</label>
+									<label><input name="poll_02" type="radio">не хочу
+									</label>
+									</label>
+								</div>
+							</div>
+						<input type="submit" class="btn" value="Оформить заказ">
+					</form>
+				</div>
+			</div>
+		</div>
+
+  <footer>
+    <div class="container_950">
+      <a class="page_up">
+        <svg width="8" height="17" viewBox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.35355 0.646446C4.15829 0.451185 3.84171 0.451185 3.64645 0.646446L0.464466 3.82843C0.269203 4.02369 0.269203 4.34027 0.464466 4.53553C0.659728 4.7308 0.97631 4.7308 1.17157 4.53553L4 1.70711L6.82843 4.53553C7.02369 4.7308 7.34027 4.7308 7.53553 4.53553C7.7308 4.34027 7.7308 4.02369 7.53553 3.82843L4.35355 0.646446ZM4.5 17L4.5 1L3.5 1L3.5 17L4.5 17Z" fill="#C4C4C4"/>
+        </svg>
+      </a>
+    </div>
+    <div class="container_950 overflow_hidden">
+      <div class="wrapper">
+        <div class="grid_12">
+          <div class="footer_nav">
+            <a href="">Контакты</a>
+            <a href="">О нас</a>
+            <a href="">FAQ</a>
+            <a href="">Оферта</a>
+            <a href="">Организаторам</a>
+            <a href="">Политика конфиденциальности</a>
+            <a href="">Корпоративным клиентам</a>
+            <a href="">Подарочный сертификат</a>
+          </div>
+        </div>
+        <div class="grid_6">
+          <div class="footer_social_nav">
+            <p>Мы в соц. сетях</p>
+            <ul>
+              <li><a href=""><img src="img/footer_social_nav_fb_icon.png" alt="" /></a></li>
+              <li><a href=""><img src="img/footer_social_nav_vk_icon.png" alt="" /></a></li>
+              <li><a href=""><img src="img/footer_social_nav_instagram_icon.png" alt="" /></a></li>
+              <li><a href=""><img src="img/footer_social_nav_ok_icon.png" alt="" /></a></li>
+            </ul>
+          </div>
+          <div class="footer_extra_info">
+            <ul>
+              <li class="my_all"><img src="img/footer_extra_info_project_01.png" alt="" /><span>МОЕ<br /><span>ВСЕ</span></span></li>
+              <li class="my_auditor"><img src="img/footer_extra_info_project_02.png" alt="" /><span>Мой <span>Ревизор</span></span></li>
+            </ul>
+            <span>Моя Афиша входит в состав проектов МоеВсе (с)</span>
+            <p>(с) 2019 ООО “Моя Афиша”<br />
+              Телефон: <a href="tel:8-800-000-00-00">8-800-000-00-00</a> <br />
+              E-mail: <a href="mailto:support@myafisha.ru" class="footer_email">support@myafisha.ru</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+</body>
+</html>

@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Моя афиша Беларусь</title>
+<meta name="keywords" lang="ru" content="" />
+<meta name="description" lang="ru" content="" />
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+<link rel="stylesheet" type="text/css" href="css/datepicker.min.css"/>
+<link rel="icon" href="favicon.png" type="image/x-icon" />
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap&subset=cyrillic" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.12.1.js"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="js/readmore.min.js"></script>
+<script type="text/javascript" src="js/datepicker.min.js"></script>
+<script type="text/javascript" src="js/panzoom.js"></script>
+
+</head>
+<body>
+	<section class="popup_menu" style="display:none;">
+		<div class="popup_menu_container">
+			<a class="popup_menu_close"></a>
+			<div>
+				<a href="" class="geolocation_btn">Санкт-Петербург</a>
+			</div>
+			<div>
+				<ul>
+					<li><a href="">Войти</a></li>
+					<li><a href="">Регистрация</a></li>
+				</ul>
+			</div>
+			<div>
+				<ul>
+					<li><a href="">Публичная оферта</a></li>
+					<li><a href="">FAQ</a></li>
+					<li><a href="">Организаторам</a></li>
+					<li><a href="">Политика конфиденциальности</a></li>
+					<li><a href="">Корпоративным клиентам</a></li>
+					<li><a href="">Подарочный сертификат</a></li>
+					<li><a href="">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="search" style="display:none;">
+		<div class="search_container">
+			<div class="search_position">
+				<a class="search_close"></a>
+				<form>
+					<div class="search_input_container">
+						<input class="white_input_placeholder" type="text" placeholder="Введите событие или место" />
+					</div>
+					<input class="search_form_btn" type="button" value="Найти билет" />
+				</form>
+			</div>
+		</div>
+	</section>
+	<section class="login" style="display:none;">
+		<div class="login_container">
+			<div class="login_position">
+			<a class="login_close"></a>
+				<ul>
+					<li id="login_navigarion" class="active">Авторизация</li>
+					<li id="registration_navigation">Регистрация</li>
+				</ul>
+				<div class="login_form_container">
+					<div class="login_form_wrapper">
+						<p class="login_form_title">Введите данные</p>
+						<form id="login_form" class="login_form open_form">
+							<div class="login_form_block">
+								<input class="white_input_placeholder" type="text" placeholder="email или телефон" />
+								<input class="white_input_placeholder" type="password" placeholder="пароль" />
+								<a href="" class="forget_pwd">Забыли пароль?</a>
+								<span class="between_fpwd_ca"></span>
+								<a class="create_accaunt">Создать аккаунт</a>
+								<input class="login_form_btn" type="button" value="Войти" />
+							</div>
+						</form>
+						<form id="registration_form" class="login_form">
+							<div class="login_form_block">
+								<input class="white_input_placeholder" type="text" placeholder="ФИО" />
+								<input class="white_input_placeholder" type="text" placeholder="email" />
+								<input class="white_input_placeholder" type="password" placeholder="пароль" />
+								<input class="white_input_placeholder" type="password" placeholder="повторите пароль" />
+								<input class="white_input_placeholder" type="text" class="registration_phone_input" placeholder="+7 (___) ___-__-__" />
+								<p>в течение 5 минут Вам придет код в СМС сообщении</p>
+								<input class="white_input_placeholder" class="auth_code" type="text" placeholder="код из СМС" />
+								<a href="">Выслать код повторно через <span>60</span> сек.</a>
+							</div>
+							<div class="agreed top_20">
+								<label>
+									<div>
+										<input type="checkbox" checked>
+										<div class="checkbox_custom"></div>
+									</div>
+									<span>Я согласен на обработку персональных данных</span>
+								</label>
+							</div>
+							<input class="registration_form_btn" type="button" value="Зарегистрироваться" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bg">
+		<header class="container_950 overflow_hidden header_desctop">
+			<div class="wrapper">
+				<div class="grid_7">
+
+						<div class="logo_container">
+							<ul>
+								<li><a>Санкт-Петербург</a></li>
+								<li>
+									<ul>
+										<li><a class="active">Рус</a></li>
+										<li><a>Eng</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="logo_container">
+							<a href="index.html" class="logo"><img src="img/logo.png" alt="" /></a>
+						</div>
+
+				</div>
+				<div class="grid_7">
+					<ul class="header_nav">
+						<li><a href="">Площадки</a></li>
+						<li><a href="">Организаторы</a></li>
+						<li><a href="">Доставка</a></li>
+					</ul>
+					<div class="site_search">
+						<input type="search" placeholder="Искать" />
+						<div class="site_search_btn">
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path opacity="0.54" fill-rule="evenodd" clip-rule="evenodd" d="M10.0073 8.80453H9.37176L9.15083 8.58522C9.93128 7.67515 10.4059 6.49534 10.4059 5.20268C10.4059 2.3292 8.07662 0 5.20297 0C2.32933 0 0 2.3292 0 5.20268C0 8.07615 2.32933 10.4054 5.20297 10.4054C6.49571 10.4054 7.67479 9.93151 8.58491 9.15191L8.80583 9.37122V10.0051L12.8065 14L14 12.8066L10.0073 8.80453ZM5.20295 8.80453C3.21301 8.80453 1.60089 7.1925 1.60089 5.20268C1.60089 3.21365 3.21301 1.60082 5.20295 1.60082C7.19209 1.60082 8.80501 3.21365 8.80501 5.20268C8.80501 7.1925 7.19209 8.80453 5.20295 8.80453Z" fill="#766D6D"/>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<ul class="user_nav">
+						<li>
+							<a class="login_btn">Войти</a>
+						</li>
+						<li>
+							<div class="shopping_cart">
+								<span>0</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<header class="header_modile">
+			<a class="buter"></a>
+			<a href="index.html" class="logo">
+				<img src="img/logo.png" alt="" />
+			</a>
+			<ul>
+				<li><a class="header_modile_search"></a></li>
+				<li><a class="header_modile_login"></a></li>
+				<li>
+					<div class="shopping_cart">
+						<span>0</span>
+					</div>
+				</li>
+			</ul>
+		</header>
+		<nav class="main_menu">
+			<div class="container_950">
+				<div class="menu_scroll_container">
+					<div class="menu_scroll">
+							<ul>
+								<li><a href="catalog.html">Театр</a></li>
+								<li><a href="catalog.html">Концерт</a></li>
+								<li><a href="catalog.html">Детям</a></li>
+								<li><a href="catalog.html">Фестивали</a></li>
+								<li><a href="catalog.html">Спорт</a></li>
+								<li><a href="catalog.html">Туристам</a></li>
+								<li><a href="catalog.htmlcatalog.html">Другое</a></li>
+								<li><a href="">Кино</a></li>
+								<li><a href="catalog.html">Акции</a></li>
+							</ul>
+						</ul>
+						<div class="calendar_container">
+							<a id="calendar_btn" class="calendar_vdwn">Календарь мероприятий</a>
+							<div class="calendar">
+								<div class="datepicker-here" data-multiple-dates="999"></div>
+								<input type="button" class="btn top_40" value="Найти билеты">
+							</div>
+						</div>
+					</div>
+				</div>
+		</nav>
+		<div class="hall_menu_fix">
+			<div class="container_950">
+				<div class="hall_container top_40 bottom_40">
+					<div class="hall_title">
+						<div class="hall_title_left">
+							<p>Спектакль "Спасти рядового "Гамлета"</p>
+							<p class="top_10">
+								<span>16</span>
+								<span>
+									<span>октября</span>
+									<span>среда</span>
+								</span>
+								<span>19:00</span>
+							</p>
+						</div>
+						<div class="hall_title_right">
+							<p>ДК Выборгский</p>
+							<p>Основная сцена</p>
+							<p>ул. Комиссара Смирнова, д. 15</p>
+							<span>16+</span>
+						</div>
+					</div>
+					<div class="hall_seats_prices top_40">
+						<ul>
+							<li><span class="taken">Место занято</span></li>
+							<li><span class="your_place">Ваше место</span></li>
+							<li><span class="red">5000 Р.</span></li>
+							<li><span class="purple">4500 Р.</span></li>
+							<li><span class="navy_blue">4000 Р.</span></li>
+							<li><span class="blue">3500 Р.</span></li>
+							<li><span class="light_green">3000 Р.</span></li>
+							<li><span class="green">2500 Р.</span></li>
+							<li><span class="turquoise">2000 Р.</span></li>
+							<li><span class="pink">1500 Р.</span></li>
+							<li><span class="yellow">1000 Р.</span></li>
+							<li><span class="beige">500 Р.</span></li>
+						</ul>
+					</div>
+					<div class="hall_svg_container" id="contain">
+						<div class="hall_svg_nav">
+							<a id="svg_increase" class="zoom-in">+</a>
+							<a id="svg_reduce" class="zoom-out">-</a>
+							<a id="svg_reset" class="reset">.</a>
+						</div>
+						<div class="hall_svg">
+							<div id="tooltip"></div>
+							<svg id="zoom_it" class="panzoom" viewBox="0 0 722 445" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="23.0624" cy="6.5625" r="6.5625" class="default" data-original-title="Партер<br/>1 ряд, место 1<br/>4000 <del>Р</del>"/>
+							<circle cx="39.9376" cy="6.5625" r="6.5625" class="default" data-original-title="Партер<br/>1 ряд, место 2<br/>4000 <del>Р</del>"/>
+							<circle cx="56.8125" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="73.6876" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="90.5627" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="107.437" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="141.187" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="158.062" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="6.5625" r="6.5625" class="default" data-original-title="Партер<br/>1 ряд, место 10<br/>4000 <del>Р</del>"/>
+							<circle cx="191.813" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="495.562" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="529.312" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="563.062" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="681.187" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="6.5625" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="35.3125" r="6.5625" class="default" data-original-title="Партер<br/>1 ряд, место 1<br/>4000 <del>Р.</del>"/>
+							<circle cx="39.9377" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="35.3125" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="92.8125" r="6.5625" class="default"/>
+							<circle cx="39.9377" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="92.8123" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="64.0627" r="6.5625" class="default"/>
+							<circle cx="39.9377" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="64.0625" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="39.9377" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="121.563" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="39.9377" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="150.312" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="39.9377" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="207.812" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="39.9377" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="179.062" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="39.9377" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="236.562" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="265.312" r="6.5625" class="default"/>
+							<circle cx="39.9377" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="265.313" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="39.9377" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="322.812" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="39.9377" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="294.062" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="39.9377" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="351.562" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="39.9377" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="380.312" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="437.813" r="6.5625" class="default"/>
+							<circle cx="39.9377" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="437.812" r="6.5625" class="default"/>
+							<circle cx="23.0625" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="39.9377" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="56.8126" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="73.6877" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="90.5629" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="107.438" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="124.313" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="141.188" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="158.063" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="174.938" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="191.813" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="208.688" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="225.563" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="242.438" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="259.313" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="276.188" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="293.062" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="309.938" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="326.813" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="343.688" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="360.563" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="377.438" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="394.313" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="411.188" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="428.063" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="444.938" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="461.813" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="478.688" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="495.563" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="512.438" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="529.313" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="546.188" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="563.063" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="579.938" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="596.813" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="613.688" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="630.563" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="647.438" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="664.313" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="681.188" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="698.063" cy="409.062" r="6.5625" class="default"/>
+							<circle cx="714.938" cy="409.062" r="6.5625" class="default"/>
+							<path d="M2.66149 5.5V10.75H1.44649V6.475H0.396494V5.5H2.66149Z" fill="white"/>
+							<path d="M4.75284 38.51V39.5H0.785342V38.7125L2.81034 36.8C3.02534 36.595 3.17034 36.42 3.24534 36.275C3.32034 36.125 3.35784 35.9775 3.35784 35.8325C3.35784 35.6225 3.28534 35.4625 3.14034 35.3525C3.00034 35.2375 2.79284 35.18 2.51784 35.18C2.28784 35.18 2.08034 35.225 1.89534 35.315C1.71034 35.4 1.55534 35.53 1.43034 35.705L0.545342 35.135C0.750342 34.83 1.03284 34.5925 1.39284 34.4225C1.75284 34.2475 2.16534 34.16 2.63034 34.16C3.02034 34.16 3.36034 34.225 3.65034 34.355C3.94534 34.48 4.17284 34.66 4.33284 34.895C4.49784 35.125 4.58034 35.3975 4.58034 35.7125C4.58034 35.9975 4.52034 36.265 4.40034 36.515C4.28034 36.765 4.04784 37.05 3.70284 37.37L2.49534 38.51H4.75284Z" fill="white"/>
+							<path d="M3.27552 65.1375C3.73552 65.2125 4.08802 65.385 4.33302 65.655C4.57802 65.92 4.70052 66.25 4.70052 66.645C4.70052 66.95 4.62052 67.2325 4.46052 67.4925C4.30052 67.7475 4.05552 67.9525 3.72552 68.1075C3.40052 68.2625 3.00052 68.34 2.52552 68.34C2.15552 68.34 1.79052 68.2925 1.43052 68.1975C1.07552 68.0975 0.773017 67.9575 0.523017 67.7775L0.995517 66.8475C1.19552 66.9975 1.42552 67.115 1.68552 67.2C1.95052 67.28 2.22052 67.32 2.49552 67.32C2.80052 67.32 3.04052 67.2625 3.21552 67.1475C3.39052 67.0275 3.47802 66.86 3.47802 66.645C3.47802 66.215 3.15052 66 2.49552 66H1.94052V65.1975L3.02052 63.975H0.785517V63H4.46052V63.7875L3.27552 65.1375Z" fill="white"/>
+							<path d="M5.57681 95.8975H4.72181V97H3.53681V95.8975H0.709307V95.08L3.18431 91.75H4.45931L2.16431 94.9075H3.57431V93.925H4.72181V94.9075H5.57681V95.8975Z" fill="white"/>
+							<path d="M2.61203 122.472C3.35203 122.472 3.89703 122.62 4.24703 122.915C4.60203 123.21 4.77953 123.605 4.77953 124.1C4.77953 124.42 4.69953 124.712 4.53953 124.977C4.37953 125.237 4.13453 125.447 3.80453 125.607C3.47953 125.762 3.07703 125.84 2.59703 125.84C2.22703 125.84 1.86203 125.793 1.50203 125.697C1.14703 125.597 0.844531 125.457 0.594531 125.277L1.07453 124.347C1.27453 124.497 1.50453 124.615 1.76453 124.7C2.02453 124.78 2.29203 124.82 2.56703 124.82C2.87203 124.82 3.11203 124.76 3.28703 124.64C3.46203 124.52 3.54953 124.352 3.54953 124.137C3.54953 123.912 3.45703 123.742 3.27203 123.627C3.09203 123.512 2.77703 123.455 2.32703 123.455H0.984531L1.25453 120.5H4.45703V121.475H2.26703L2.18453 122.472H2.61203Z" fill="white"/>
+							<path d="M3.18206 151.208C3.51706 151.208 3.82206 151.275 4.09706 151.41C4.37206 151.545 4.58956 151.738 4.74956 151.988C4.90956 152.233 4.98956 152.518 4.98956 152.843C4.98956 153.193 4.90206 153.5 4.72706 153.765C4.55206 154.03 4.31206 154.235 4.00706 154.38C3.70706 154.52 3.37206 154.59 3.00206 154.59C2.26706 154.59 1.69206 154.365 1.27706 153.915C0.86206 153.465 0.65456 152.823 0.65456 151.988C0.65456 151.393 0.76706 150.883 0.99206 150.458C1.21706 150.033 1.52956 149.71 1.92956 149.49C2.33456 149.27 2.80206 149.16 3.33206 149.16C3.61206 149.16 3.87956 149.193 4.13456 149.258C4.39456 149.318 4.61456 149.405 4.79456 149.52L4.34456 150.413C4.08456 150.238 3.75706 150.15 3.36206 150.15C2.91706 150.15 2.56456 150.28 2.30456 150.54C2.04456 150.8 1.90456 151.178 1.88456 151.673C2.19456 151.363 2.62706 151.208 3.18206 151.208ZM2.93456 153.683C3.19456 153.683 3.40456 153.613 3.56456 153.473C3.72956 153.333 3.81206 153.143 3.81206 152.903C3.81206 152.663 3.72956 152.473 3.56456 152.333C3.40456 152.188 3.18956 152.115 2.91956 152.115C2.65456 152.115 2.43706 152.19 2.26706 152.34C2.09706 152.485 2.01206 152.673 2.01206 152.903C2.01206 153.133 2.09456 153.32 2.25956 153.465C2.42456 153.61 2.64956 153.683 2.93456 153.683Z" fill="white"/>
+							<path d="M4.82682 178V178.787L2.87682 183.25H1.55682L3.43932 178.99H1.69932V179.845H0.619316V178H4.82682Z" fill="white"/>
+							<path d="M4.15917 209.24C4.41917 209.37 4.61667 209.54 4.75167 209.75C4.89167 209.96 4.96167 210.203 4.96167 210.478C4.96167 210.803 4.86917 211.088 4.68417 211.333C4.49917 211.573 4.23917 211.76 3.90417 211.895C3.56917 212.025 3.18167 212.09 2.74167 212.09C2.30167 212.09 1.91417 212.025 1.57917 211.895C1.24917 211.76 0.99167 211.573 0.80667 211.333C0.62667 211.088 0.53667 210.803 0.53667 210.478C0.53667 210.203 0.60417 209.96 0.73917 209.75C0.87917 209.54 1.07667 209.37 1.33167 209.24C1.13667 209.12 0.98667 208.97 0.88167 208.79C0.77667 208.605 0.72417 208.395 0.72417 208.16C0.72417 207.855 0.80917 207.59 0.97917 207.365C1.14917 207.14 1.38667 206.968 1.69167 206.848C1.99667 206.723 2.34667 206.66 2.74167 206.66C3.14167 206.66 3.49417 206.723 3.79917 206.848C4.10917 206.968 4.34917 207.14 4.51917 207.365C4.68917 207.59 4.77417 207.855 4.77417 208.16C4.77417 208.395 4.72167 208.605 4.61667 208.79C4.51167 208.97 4.35917 209.12 4.15917 209.24ZM2.74167 207.553C2.49667 207.553 2.29917 207.613 2.14917 207.733C2.00417 207.848 1.93167 208.008 1.93167 208.213C1.93167 208.413 2.00417 208.57 2.14917 208.685C2.29417 208.8 2.49167 208.858 2.74167 208.858C2.99167 208.858 3.19167 208.8 3.34167 208.685C3.49167 208.57 3.56667 208.413 3.56667 208.213C3.56667 208.008 3.49167 207.848 3.34167 207.733C3.19167 207.613 2.99167 207.553 2.74167 207.553ZM2.74167 211.198C3.04667 211.198 3.28667 211.13 3.46167 210.995C3.64167 210.855 3.73167 210.67 3.73167 210.44C3.73167 210.21 3.64167 210.028 3.46167 209.893C3.28667 209.758 3.04667 209.69 2.74167 209.69C2.44167 209.69 2.20417 209.758 2.02917 209.893C1.85417 210.028 1.76667 210.21 1.76667 210.44C1.76667 210.675 1.85417 210.86 2.02917 210.995C2.20417 211.13 2.44167 211.198 2.74167 211.198Z" fill="white"/>
+							<path d="M2.49956 235.41C3.23456 235.41 3.80956 235.635 4.22456 236.085C4.63956 236.53 4.84706 237.172 4.84706 238.012C4.84706 238.607 4.73456 239.117 4.50956 239.542C4.28956 239.967 3.97706 240.29 3.57206 240.51C3.16706 240.73 2.69956 240.84 2.16956 240.84C1.88956 240.84 1.62206 240.81 1.36706 240.75C1.11206 240.685 0.89456 240.595 0.71456 240.48L1.16456 239.587C1.41956 239.762 1.74706 239.85 2.14706 239.85C2.59206 239.85 2.94456 239.72 3.20456 239.46C3.46456 239.195 3.60456 238.815 3.62456 238.32C3.30956 238.635 2.87456 238.792 2.31956 238.792C1.98456 238.792 1.67956 238.725 1.40456 238.59C1.12956 238.455 0.91206 238.265 0.75206 238.02C0.59206 237.77 0.51206 237.482 0.51206 237.157C0.51206 236.807 0.59956 236.5 0.77456 236.235C0.94956 235.97 1.18706 235.767 1.48706 235.627C1.79206 235.482 2.12956 235.41 2.49956 235.41ZM2.58956 237.885C2.85456 237.885 3.06956 237.812 3.23456 237.667C3.40456 237.517 3.48956 237.327 3.48956 237.097C3.48956 236.867 3.40706 236.68 3.24206 236.535C3.08206 236.39 2.85956 236.317 2.57456 236.317C2.31456 236.317 2.10206 236.387 1.93706 236.527C1.77706 236.667 1.69706 236.857 1.69706 237.097C1.69706 237.337 1.77706 237.53 1.93706 237.675C2.10206 237.815 2.31956 237.885 2.58956 237.885Z" fill="white"/>
+							<path d="M2.61608 264.25V269.5H1.40108V265.225H0.351083V264.25H2.61608ZM5.7781 269.59C5.3431 269.59 4.9556 269.483 4.6156 269.268C4.2756 269.053 4.0081 268.743 3.8131 268.338C3.6231 267.928 3.5281 267.44 3.5281 266.875C3.5281 266.31 3.6231 265.825 3.8131 265.42C4.0081 265.01 4.2756 264.698 4.6156 264.483C4.9556 264.268 5.3431 264.16 5.7781 264.16C6.2131 264.16 6.6006 264.268 6.9406 264.483C7.2806 264.698 7.5456 265.01 7.7356 265.42C7.9306 265.825 8.0281 266.31 8.0281 266.875C8.0281 267.44 7.9306 267.928 7.7356 268.338C7.5456 268.743 7.2806 269.053 6.9406 269.268C6.6006 269.483 6.2131 269.59 5.7781 269.59ZM5.7781 268.563C6.0981 268.563 6.3481 268.425 6.5281 268.15C6.7131 267.875 6.8056 267.45 6.8056 266.875C6.8056 266.3 6.7131 265.875 6.5281 265.6C6.3481 265.325 6.0981 265.188 5.7781 265.188C5.4631 265.188 5.2131 265.325 5.0281 265.6C4.8481 265.875 4.7581 266.3 4.7581 266.875C4.7581 267.45 4.8481 267.875 5.0281 268.15C5.2131 268.425 5.4631 268.563 5.7781 268.563Z" fill="white"/>
+							<path d="M2.75524 293V298.25H1.54024V293.975H0.490244V293H2.75524ZM5.69226 293V298.25H4.47726V293.975H3.42726V293H5.69226Z" fill="white"/>
+							<path d="M2.63684 321.75V327H1.42184V322.725H0.371836V321.75H2.63684ZM7.47135 326.01V327H3.50385V326.212L5.52885 324.3C5.74385 324.095 5.88885 323.92 5.96385 323.775C6.03885 323.625 6.07635 323.477 6.07635 323.332C6.07635 323.122 6.00385 322.962 5.85885 322.852C5.71885 322.737 5.51135 322.68 5.23635 322.68C5.00635 322.68 4.79885 322.725 4.61385 322.815C4.42885 322.9 4.27385 323.03 4.14885 323.205L3.26385 322.635C3.46885 322.33 3.75135 322.092 4.11135 321.922C4.47135 321.747 4.88385 321.66 5.34885 321.66C5.73885 321.66 6.07885 321.725 6.36885 321.855C6.66385 321.98 6.89135 322.16 7.05135 322.395C7.21635 322.625 7.29885 322.897 7.29885 323.212C7.29885 323.497 7.23885 323.765 7.11885 324.015C6.99885 324.265 6.76635 324.55 6.42135 324.87L5.21385 326.01H7.47135Z" fill="white"/>
+							<path d="M2.62951 350.5V355.75H1.41451V351.475H0.364511V350.5H2.62951ZM5.99402 352.638C6.45402 352.713 6.80652 352.885 7.05152 353.155C7.29652 353.42 7.41902 353.75 7.41902 354.145C7.41902 354.45 7.33902 354.733 7.17902 354.993C7.01902 355.248 6.77402 355.453 6.44402 355.608C6.11902 355.763 5.71902 355.84 5.24402 355.84C4.87402 355.84 4.50902 355.793 4.14902 355.698C3.79402 355.598 3.49152 355.458 3.24152 355.278L3.71402 354.348C3.91402 354.498 4.14402 354.615 4.40402 354.7C4.66902 354.78 4.93902 354.82 5.21402 354.82C5.51902 354.82 5.75902 354.763 5.93402 354.648C6.10902 354.528 6.19652 354.36 6.19652 354.145C6.19652 353.715 5.86902 353.5 5.21402 353.5H4.65902V352.698L5.73902 351.475H3.50402V350.5H7.17902V351.288L5.99402 352.638Z" fill="white"/>
+							<path d="M2.5758 379.25V384.5H1.3608V380.225H0.3108V379.25H2.5758ZM8.29531 383.397H7.44031V384.5H6.25531V383.397H3.42781V382.58L5.90281 379.25H7.17781L4.88281 382.407H6.29281V381.425H7.44031V382.407H8.29531V383.397Z" fill="white"/>
+							<path d="M2.61853 408V413.25H1.40353V408.975H0.353525V408H2.61853ZM5.33054 409.972C6.07054 409.972 6.61554 410.12 6.96554 410.415C7.32054 410.71 7.49804 411.105 7.49804 411.6C7.49804 411.92 7.41804 412.212 7.25804 412.477C7.09804 412.737 6.85304 412.947 6.52304 413.107C6.19804 413.262 5.79554 413.34 5.31554 413.34C4.94554 413.34 4.58054 413.293 4.22054 413.197C3.86554 413.097 3.56304 412.957 3.31304 412.777L3.79304 411.847C3.99304 411.997 4.22304 412.115 4.48304 412.2C4.74304 412.28 5.01054 412.32 5.28554 412.32C5.59054 412.32 5.83054 412.26 6.00554 412.14C6.18054 412.02 6.26804 411.852 6.26804 411.637C6.26804 411.412 6.17554 411.242 5.99054 411.127C5.81054 411.012 5.49554 410.955 5.04554 410.955H3.70304L3.97304 408H7.17554V408.975H4.98554L4.90304 409.972H5.33054Z" fill="white"/>
+							<path d="M2.77355 436.75V442H1.55855V437.725H0.508554V436.75H2.77355ZM6.21307 438.707C6.54807 438.707 6.85307 438.775 7.12807 438.91C7.40307 439.045 7.62057 439.237 7.78057 439.487C7.94057 439.732 8.02057 440.017 8.02057 440.342C8.02057 440.692 7.93307 441 7.75807 441.265C7.58307 441.53 7.34307 441.735 7.03807 441.88C6.73807 442.02 6.40307 442.09 6.03307 442.09C5.29807 442.09 4.72307 441.865 4.30807 441.415C3.89307 440.965 3.68557 440.322 3.68557 439.487C3.68557 438.892 3.79807 438.382 4.02307 437.957C4.24807 437.532 4.56057 437.21 4.96057 436.99C5.36557 436.77 5.83307 436.66 6.36307 436.66C6.64307 436.66 6.91057 436.692 7.16557 436.757C7.42557 436.817 7.64557 436.905 7.82557 437.02L7.37557 437.912C7.11557 437.737 6.78807 437.65 6.39307 437.65C5.94807 437.65 5.59557 437.78 5.33557 438.04C5.07557 438.3 4.93557 438.677 4.91557 439.172C5.22557 438.862 5.65807 438.707 6.21307 438.707ZM5.96557 441.182C6.22557 441.182 6.43557 441.112 6.59557 440.972C6.76057 440.832 6.84307 440.642 6.84307 440.402C6.84307 440.162 6.76057 439.972 6.59557 439.832C6.43557 439.687 6.22057 439.615 5.95057 439.615C5.68557 439.615 5.46807 439.69 5.29807 439.84C5.12807 439.985 5.04307 440.172 5.04307 440.402C5.04307 440.632 5.12557 440.82 5.29057 440.965C5.45557 441.11 5.68057 441.182 5.96557 441.182Z" fill="white"/>
+							</svg>
+						</div>
+					<div class="hall_container_btn">
+						<a href="questionnaire.html" class="btn">Оформить заказ</a>
+						<a class="btn">Продолжить покупки</a>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  <footer>
+    <div class="container_950">
+      <a class="page_up">
+        <svg width="8" height="17" viewBox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.35355 0.646446C4.15829 0.451185 3.84171 0.451185 3.64645 0.646446L0.464466 3.82843C0.269203 4.02369 0.269203 4.34027 0.464466 4.53553C0.659728 4.7308 0.97631 4.7308 1.17157 4.53553L4 1.70711L6.82843 4.53553C7.02369 4.7308 7.34027 4.7308 7.53553 4.53553C7.7308 4.34027 7.7308 4.02369 7.53553 3.82843L4.35355 0.646446ZM4.5 17L4.5 1L3.5 1L3.5 17L4.5 17Z" fill="#C4C4C4"/>
+        </svg>
+      </a>
+    </div>
+    <div class="container_950 overflow_hidden">
+      <div class="wrapper">
+        <div class="grid_12">
+          <div class="footer_nav">
+            <a href="">Контакты</a>
+            <a href="">О нас</a>
+            <a href="">FAQ</a>
+            <a href="">Оферта</a>
+            <a href="">Организаторам</a>
+            <a href="">Политика конфиденциальности</a>
+            <a href="">Корпоративным клиентам</a>
+            <a href="">Подарочный сертификат</a>
+          </div>
+        </div>
+        <div class="grid_6">
+          <div class="footer_social_nav">
+            <p>Мы в соц. сетях</p>
+            <ul>
+              <li><a href=""><img src="img/footer_social_nav_fb_icon.png" alt="" /></a></li>
+              <li><a href=""><img src="img/footer_social_nav_vk_icon.png" alt="" /></a></li>
+              <li><a href=""><img src="img/footer_social_nav_instagram_icon.png" alt="" /></a></li>
+              <li><a href=""><img src="img/footer_social_nav_ok_icon.png" alt="" /></a></li>
+            </ul>
+          </div>
+          <div class="footer_extra_info">
+            <ul>
+              <li class="my_all"><img src="img/footer_extra_info_project_01.png" alt="" /><span>МОЕ<br /><span>ВСЕ</span></span></li>
+              <li class="my_auditor"><img src="img/footer_extra_info_project_02.png" alt="" /><span>Мой <span>Ревизор</span></span></li>
+            </ul>
+            <span>Моя Афиша входит в состав проектов МоеВсе (с)</span>
+            <p>(с) 2019 ООО “Моя Афиша”<br />
+              Телефон: <a href="tel:8-800-000-00-00">8-800-000-00-00</a> <br />
+              E-mail: <a href="mailto:support@myafisha.ru" class="footer_email">support@myafisha.ru</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+</body>
+</html>
