@@ -11,18 +11,19 @@
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-<link rel="stylesheet" type="text/css" href="css/pickmeup.css"/>
+<link rel="stylesheet" type="text/css" href="css/datepicker.min.css"/>
 <link rel="icon" href="favicon.png" type="image/x-icon" />
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap&subset=cyrillic" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
-<script type="text/javascript" src="js/pickmeup.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.12.1.js"></script>
 <script type="text/javascript" src="js/jquery.nicescroll.js"></script>
 <script type="text/javascript" src="js/readmore.min.js"></script>
+<script type="text/javascript" src="js/datepicker.min.js"></script>
+<script type="text/javascript" src="js/panzoom.js"></script>
 
 </head>
 <body>
@@ -98,10 +99,12 @@
 							</div>
 							<div class="agreed top_20">
 								<label>
-									<input type="checkbox" checked>
-									<div class="checkbox_custom"></div>
+									<div>
+										<input type="checkbox" checked>
+										<div class="checkbox_custom"></div>
+									</div>
+									<span>Я согласен на обработку персональных данных</span>
 								</label>
-								<span>Я согласен на обработку персональных данных</span>
 							</div>
 							<input class="registration_form_btn" type="button" value="Зарегистрироваться" />
 						</form>
@@ -192,9 +195,9 @@
 							</ul>
 						</ul>
 						<div class="calendar_container">
-							<a class="calendar_vdwn calendar_btn">Календарь мероприятий</a>
+							<a id="calendar_btn" class="calendar_vdwn">Календарь мероприятий</a>
 							<div class="calendar">
-								<div class="single"></div>
+								<div class="datepicker-here" data-multiple-dates="999"></div>
 								<input type="button" class="btn top_40" value="Найти билеты">
 							</div>
 						</div>

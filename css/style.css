@@ -1,4 +1,4 @@
-*{margin:0px;padding:0px;text-align:left;}
+*{margin:0px;padding:0px;text-align:left;outline: none;}
 html{height:100%;}
 img, svg{border:none;}
 section, header, nav, article, aside, footer{display:block;}
@@ -21,16 +21,20 @@ input[type="number"]:focus { outline: none; }
 input[type="submit"]:focus { outline: none; }
 textarea:focus { outline: none; }
 
+.clearfix{clear: both;}
 .clearfix:after, .clearfix:before {display: table;content: "";}
 
 h1{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:21px;text-align:center;color:#fff;padding:32px 0;}
 h2{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:18px;text-align:center;color:#fff;padding:32px 0;}
+h3{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:16px;text-align:center;color:#fff;padding:32px 0;}
 
 .grid_1, .grid_2, .grid_3, .grid_3_1, .grid_4, .grid_5, .grid_6, .grid_6_1, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12, .grid_13, .grid_14, .grid_15, .grid_16, .grid_17, .grid_18, .grid_19, .grid_20, .grid_21, .grid_22, .grid_23, .grid_24, .grid_6_m0 {display:inline;float:left;position:relative;}
 
-.top_40{margin-top:40px;}
-.top_20{margin-top:20px;}
+.top_5{margin-top:5px;}
 .top_10{margin-top:10px;}
+.top_20{margin-top:20px;}
+.top_40{margin-top:40px;}
+
 .bottom_40{margin-bottom:40px;}
 .overflow_hidden{overflow:hidden;}
 
@@ -75,6 +79,7 @@ h2{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:18px;text-ali
 .container_950 .grid_2{width:100px;margin-right:50px;}
 .container_950 .grid_3{width:150px;margin-right:50px;}
 .container_950 .grid_4{width:200px;margin-right:50px;}
+.container_950 .grid_4.fix{width:197px;margin-right:50px;}
 .container_950 .grid_5{width:250px;margin-right:50px;}
 .container_950 .grid_6{width:300px;margin-right:50px;}
 .container_950 .grid_7{width:350px;margin-right:50px;}
@@ -114,12 +119,11 @@ h2{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:18px;text-ali
 .auth_code{width:85px!important;}
 
 .agreed {text-align:center;}
-.agreed label{position: relative;width: 15px;height: 15px;display: inline-block;vertical-align:middle;}
+.agreed label>div{position: relative;width: 15px;height: 15px;display: inline-block;vertical-align:middle;}
 .agreed span{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:9px;text-align:center;}
-..agreed input {display:none;}
-.checkbox_custom {position: absolute;width: 100%;height: 100%;background:#F69707;top:0;cursor:pointer;display:inline-block;}
-.agreed input:checked + .checkbox_custom::before {content: "✓";font-size:10px;display: block;position: absolute;top: -5px;right: 0;bottom: 0;left: 0;margin:auto;color: #fff;width:10px;height:10px;text-align:center;}
-
+.agreed input {display:none;}
+.checkbox_custom {position: absolute;width: 100%;height: 100%;background:#C4C4C4;top:0;cursor:pointer;display:inline-block;border-radius: 2px;}
+.agreed input:checked + .checkbox_custom:before {content: "✓";font-size:10px;display: block;position: absolute;top:0;right: 0;bottom: 0;left: 0;margin:auto;color: #fff;width:15px;height:15px;text-align:center;background: #F69707;border-radius: 2px;}
 .create_accaunt{display:none !important;}
 
 /*Шапка сайта*/
@@ -147,7 +151,7 @@ header{height:116px;}
 .login_btn{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:13px;color:#fff;text-decoration:none;-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;-o-transition: all 0.3s ease;transition: all 0.3s ease;cursor:pointer;}
 .login_btn:hover{color:#F69707;-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;-o-transition: all 0.3s ease;transition: all 0.3s ease;}
 .shopping_cart{position:relative;width:22px;height:22px;background:url(../img/shopping_cart.png) center center no-repeat;cursor:pointer;}
-.shopping_cart span{position:absolute;right:0;bottom:0;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:6px;line-height:12px;width:8px;height:10px;text-align:center;color:#000;}
+.shopping_cart span{position:absolute;right:0;bottom:0;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:6px;line-height:10px;width:8px;height:10px;text-align:center;color:#000;}
 
 /*Меню*/
 .main_menu{height:60px;width:100%;background:#F69707;position:relative;}
@@ -161,12 +165,9 @@ header{height:116px;}
 .calendar_vdwn{background:url(../img/calendar_v_dwn.png) center right no-repeat;}
 .calendar_vup{background:url(../img/calendar_v_up.png) center right no-repeat;}
 .calendar_container a:before{content: url(../img/calendar_icon.png);display:inline-block;width:14px;height:14px;position:absolute;margin-right: 5px;left:0;top:0;}
-.calendar{background: rgba(0, 0, 0, 1);position:absolute;top:60px;right:30px;width:272px;height:375px;z-index:3;display:none;}
-
-
+.calendar{background: rgba(0, 0, 0, 1);position:absolute;top:60px;right:30px;width:292px;height:375px;z-index:3;display:none;}
 
 /*Слайдер на главной странице*/
-
 .main_slider{position:relative;z-index:1;}
 .slider_asis{height:375px;}
 .slide_wrap{position:relative;text-align:center;}
@@ -216,16 +217,21 @@ header{height:116px;}
 	.catalog_filter_container ul>li>a:hover{border-bottom:1px solid #F69707;}
 	.filter_reset{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color:#fff;cursor:pointer;position:absolute;right:0;top:0;line-height:42px;}
 	.filter_reset:before{content:'x';margin-right:3px;}
-	.catalog_filter_container div ul li>ul, .catalog_filter_container div ul li div.catalog_playground_container{padding:0 20px;}
+	.catalog_filter_genre_container, .catalog_filter_container div ul li div.catalog_playground_container{padding:0 20px;}
 
-	.catalog_filter_container div ul li>ul, .catalog_filter_container div ul li div.catalog_calendar, .catalog_filter_container div ul li div.catalog_filter_price_container, .catalog_filter_container div ul li div.catalog_playground_container{opacity:0;position:absolute;background:#0B0702;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color:#fff;}
+	.catalog_filter_genre_container, .catalog_filter_container div ul li div.catalog_calendar, .catalog_filter_container div ul li div.catalog_filter_price_container, .catalog_filter_container div ul li div.catalog_playground_container{display: none;position:absolute;background:#0B0702;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color:#fff;z-index: 1;}
+  .catalog_calendar {width:292px;height:280px;}
 
-	.catalog_filter_container div ul li>ul li{display:block;margin-right:0;}
-	.catalog_filter_container div ul li>ul li a{padding:0 5px 5px 5px;}
-	.catalog_filter_container div ul li>ul li a.active{border-bottom:1px solid #F69707;}
-	.catalog_filter_container div ul li>ul li a:hover{border-bottom:1px solid #F69707;}
+  .catalog_filter_genre label{position: relative;display: inline-block;cursor: pointer;padding: 0 5px;}
+  .catalog_filter_genre input {display: none;}
 
-	.catalog_filter_container div ul>li:hover ul, .catalog_filter_container div ul li:hover div.catalog_calendar, .catalog_filter_container div ul li:hover div.catalog_filter_price_container, .catalog_filter_container div ul li:hover div.catalog_playground_container{opacity:1;z-index:1;display:block;}
+  .inpt_chck:checked + .checkbox_filter_custom {position: absolute;bottom:0;left:0;width:100%;border-bottom: 1px solid #F69707;}
+
+  .catalog_filter_genre_container {line-height: 30px;padding: 0 20px 20px 20px;}
+	.catalog_filter_genre_container li{display:block;margin-right:0;}
+	.catalog_filter_genre_container li a{padding:0 5px 5px 5px;}
+	.catalog_filter_genre_container li a.active{border-bottom:1px solid #F69707;}
+	.catalog_filter_genre_container li a:hover{border-bottom:1px solid #F69707;}
 
 	.catalog_filter_price_container{width:350px;padding:25px;}
 
@@ -238,6 +244,8 @@ header{height:116px;}
 	.catalog_playgrounds_values a{padding:0 5px 5px 5px;cursor:pointer;}
 	.catalog_playgrounds_values a:hover{border-bottom:1px solid #F69707;}
 	.catalog_playground_input_container{width:54%;padding:20px 0;position:relative;}
+
+  .filter_mobile_btn, .filter_mobile_events_amount{display: none;}
 
 	/* --> Страница события */
 
@@ -264,14 +272,9 @@ header{height:116px;}
 	.event_page_feedbacks_form_container p:after{content:'';display:inline-block;vertical-align:middle;}
 	.event_page_feedbacks_form_container textarea{padding:10px;color:#fff;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:14px;width:100%;height:125px;background: #0B0F18;border: 1px solid #F69707;box-sizing: border-box;}
 	.event_page_feedbacks_form_container div{width:150px;float:right;}
-	#datepicker{width:150px;height:38px;background: #1C1B2F;border: 0.6px solid #FFFFFF;box-sizing: border-box;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:16px;color:#fff;text-align:center;}
-	#datepicker:after{content:'';background:url(../img/expand_more.png) center center no-repeat;display:inline-block;width:14px;height:14px;}
-	#ui-datepicker-div{background:#000;box-sizing: border-box;padding:20px;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#fff;text-align:center;}
-	.ui-datepicker-title, .ui-datepicker-calendar td{text-align:center;}
-	.ui-state-default{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#fff;text-decoration:none;}
-	.ui-state-disabled{opacity: .35;}
-	.ui-corner-all{cursor:pointer;}
-	.ui-datepicker-next{float:right;}
+	.event_page_event_info .datepicker-here{width:150px;height:38px;background: #1C1B2F;border: 0.6px solid #FFFFFF;box-sizing: border-box;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:16px;color:#fff;text-align:center;}
+	.event_page_event_info .datepicker-here:after{content:'';background:url(../img/expand_more.png) center center no-repeat;display:inline-block;width:14px;height:14px;}
+
 
 	/* --> Страница Организатора */
 
@@ -290,6 +293,248 @@ header{height:116px;}
 	.organizer_page_description ul{list-style:none;margin-bottom:10px;}
 	.organizer_page_description ul li{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#fff;line-height:18px;}
 	.organizer_page_description_container a{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#fff;line-height:36px;border-bottom:1px dashed #fff;cursor:pointer;}
+
+  /* --> Страница пользователя*/
+  .user_menu_container{width: 100%;background: #0B0702;position: relative;}
+  .user_menu_container ul {list-style:none;line-height:40px;}
+  .user_menu_container ul>li{display: inline-block;margin-right: 20px;}
+  .user_menu_container ul>li a{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color:#fff;cursor:pointer;padding:0 5px 5px 5px;text-decoration: none;}
+  .user_accaunt_menu a:hover{border-bottom: 1px solid #F69707;}
+  .user_accaunt_menu a.active{border-bottom: 1px solid #F69707;}
+  .user_accaunt_menu{display: none;position:absolute;background:#0B0702;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color:#fff;z-index: 1;padding: 0 20px 20px 20px;}
+  .user_accaunt_menu>li{display: block !important;margin-right:0 !important;}
+
+  .user_content_container{padding-bottom: 50px;}
+  .user_content_container h2{text-align: left !important;}
+  .user_content_container legend{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 24px;color:#fff;}
+  input.failure{border: 1px solid #FF0000 !important;background:#1C1B2F url(../img/input_failure_icon.png) 97% 50% no-repeat !important;}
+  .user_content_container input[type="text"], .user_content_container input[type="email"], .user_content_container input[type="password"], .user_content_container input[type="tel"]{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 18px;color:#fff;background: #1C1B2F;border: 0.7px solid #C4C4C4;box-sizing: border-box;width:100%;padding: 10px;}
+  .user_content_container input[type="date"]{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 18px;border: 0.7px solid #C4C4C4;box-sizing: border-box;width:100%;padding: 10px;}
+  .input_pwd_group{position: relative;}
+  .spass{position: absolute;right:12px;top:50%;margin-top: -6px;background: url(../img/input_pwd_eye_open.png) center center no-repeat;width:12px;height:12px;cursor: pointer;}
+  .hpass{position: absolute;right:12px;top:50%;margin-top: -6px;background: url(../img/input_pwd_eye_close.png) center center no-repeat;width:12px;height:12px;cursor: pointer;}
+  .user_content_dob, .user_content_gender{display: inline-block;width: 40%;vertical-align: top;}
+  .user_content_phone_code, .user_content_phone_code_info{display: inline-block;vertical-align: top;}
+  .user_content_phone_code{width: 25%;margin-right: 5%;}
+  .user_content_phone_code_info{width: 68%;}
+  .user_content_phone_code_info p{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color:#fff;}
+  .user_content_phone_code_info a{text-decoration: underline;cursor: pointer;}
+  .user_content_gender{margin-left: 10%;}
+  .user_content_dob, .user_content_gender label{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 36px;color:#fff;display: inline-block;vertical-align: middle;cursor: pointer;}
+  .user_personal_recommends{width:100%;height:200px;overflow: hidden;}
+  .user_personal_recommends img{width:100%;}
+
+  .user_agreed label>div{position: relative;width: 15px;height: 15px;display: inline-block;vertical-align:middle;}
+  .user_agreed span{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:9px;text-align:center;color:#fff;cursor: pointer;}
+  .user_agreed input {display:none;}
+  .user_agreed .checkbox_custom {position: absolute;width: 100%;height: 100%;background:#C4C4C4;top:0;cursor:pointer;display:inline-block;border-radius: 2px;}
+  .user_agreed input:checked + .checkbox_custom:before {content: "✓";font-size:10px;display: block;position: absolute;top:0;right: 0;bottom: 0;left: 0;margin:auto;color: #333333;width:15px;height:15px;text-align:center;background: #F69707;border-radius: 2px;}
+  .user_content_gender input{width:14px;height: 14px;background: url(../img/radio_off.png) center center no-repeat;vertical-align: middle;margin-right: 5px;outline: none;}
+  .user_content_gender input:checked{background: url(../img/radio_on.png) center center no-repeat;}
+
+  .user_content_container .btn{margin-left: 0;}
+
+  .user_order_container{width:100%;border: 1px solid #C4C4C4;background: #1C1B2F;padding: 10px;box-sizing: border-box;}
+  .user_order_val, .user_order_seat{display: inline-block;vertical-align: top;}
+  .user_order_val{width:55%;margin-right: 3%;}
+  .user_order_seat{width:40%;}
+  .user_order_seat div{position: relative;}
+
+  .user_order_container p{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#fff;margin-bottom: 5px;}
+  .user_ticket_download{background: url(../img/user_ticket_download.png) center center no-repeat;width:12px;height: 12px;position: absolute;right:0;bottom: 3px;-webkit-transition: .2s;-moz-transition: .2s;-ms-transition: .2s;-o-transition: .2s;transition: .2s;-webkit-filter: grayscale(100%);filter: grayscale(100%);}
+  .user_ticket_download:hover{ grayscale(0%);filter: grayscale(0%);}
+  .user_return_request_btn{background: url(../img/return_request_icon.png) center right no-repeat;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#F69707;-webkit-transition: .2s;-moz-transition: .2s;-ms-transition: .2s;-o-transition: .2s;transition: .2s;-webkit-filter: grayscale(100%);filter: grayscale(100%);cursor: pointer;padding-right: 15px;display:block;text-align:right;}
+  .user_return_request_btn:hover{ grayscale(0%);filter: grayscale(0%);}
+
+  /*Холл*/
+  .hall_container{padding: 20px 80px 20px 45px;background: rgba(11,15,24,0.6);border: 1px solid #F69707;box-sizing: border-box;}
+  .hall_container_questionaire{padding: 20px 45px;background: rgba(11,15,24,0.6);border: 1px solid #F69707;box-sizing: border-box;}
+  .hall_svg {width: 100%;overflow: hidden;}
+  .hall_svg_container{position: relative;margin-top: 40px;}
+  .hall_svg_nav{position: absolute;right:-50px;}
+  .hall_svg_nav a{width: 28px;height: 28px;display: block;padding: 6px;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:36px;color:#fff;text-align: center;cursor: pointer;border-radius: 6px;}
+  .hall_svg_nav a#svg_increase{line-height: 28px;}
+  .hall_svg_nav a#svg_reduce{line-height: 22px;}
+  .hall_svg_nav a#svg_reset{line-height: 11px;color:#fff;font-size: 40px;font-weight: 800;}
+  circle.active{background: rgb(246, 151, 7);}
+  .hall_svg_nav a:nth-child(1){background: rgba(0, 0, 0, 0.5); }
+  .hall_svg_nav a:nth-child(2){background: rgba(246, 151, 7, 0.5);margin-top: 5px;}
+  .hall_svg_nav a:nth-child(3){background: rgba(255, 255, 255, 0.5);margin-top: 5px;}
+  .hall_svg svg{width: 100%;display: block;}
+  .hall_title_left{width: 250px;float: left;vertical-align: top;}
+  .hall_title_right{width: 200px;float: right;vertical-align: top;}
+  .hall_title{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:11px;color:#fff;display: flow-root;}
+  .hall_title_left p:nth-child(2)>span:nth-child(n){display: inline-block;vertical-align: top;margin-right: 5px;}
+  .hall_title_left p:nth-child(2)>span:nth-child(2)>span{display: block;}
+  .hall_title_left p:nth-child(2)>span:nth-child(1), .hall_title_left p:nth-child(2)>span:nth-child(3){font-size:22px;font-weight: 500;}
+  .hall_title_right {position: relative;}
+  .hall_title_right p{text-align: right;}
+  .hall_title_right span{position: absolute;top:0;right:-40px;width:26px;height: 26px;border-radius: 14px;background: #F69707;color:#000;text-align: center;line-height: 26px;}
+  .hall_title_right p:nth-child(1){font-weight: 600;}
+  #zoom_it circle.default {fill: #b9b9bb;position: relative;}
+  .circle_default_hover {fill: #F69707 !important;}
+  #zoom_it circle.default:hover {fill: #F69707;}
+  #tooltip {z-index: 9999;position: absolute;display: none;top:0px;left:0px;width: 100px;background: #fff;padding: 8px;color: #000;text-align: center;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:8px;line-height: 16px;font-weight: 800;}
+  #tooltip:after {content: '';width: 10px;height: 10px;background: #fff;display: block;position: absolute;bottom: -5px;left: 50%;margin-left: -5px;-ms-transform: rotate(45deg);-webkit-transform: rotate(45deg);-o-transform: rotate(45deg);-moz-transform: rotate(45deg);transform: rotate(45deg);}
+
+  .hall_seats_prices ul{list-style: none;}
+  .hall_seats_prices li{display: inline-block;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:11px;color:#fff;margin-right:3px;}
+  .hall_seats_prices span{display:inline-block;}
+  .hall_seats_prices span:before{margin-right: 5px;margin-bottom: 3px;width:10px;height:10px;border-radius: 6px;display: inline-block;vertical-align: middle;}
+  .hall_seats_prices span.taken:before{content:'';background: #464545}
+  .hall_seats_prices span.your_place:before{content:'';background: #F69707;}
+  .hall_seats_prices span.red:before{content:'';background: #FF0000;}
+  .hall_seats_prices span.red:before{content:'';background: #FF0000;}
+  .hall_seats_prices span.purple:before{content:'';background: #8700B7;}
+  .hall_seats_prices span.navy_blue:before{content:'';background: #1D2DB9;}
+  .hall_seats_prices span.blue:before{content:'';background: #1BAFCF;}
+  .hall_seats_prices span.light_green:before{content:'';background: #0DFC7B;}
+  .hall_seats_prices span.green:before{content:'';background: #03AB00;}
+  .hall_seats_prices span.turquoise:before{content:'';background: #6CFFFF;}
+  .hall_seats_prices span.pink:before{content:'';background: #F25C92;}
+  .hall_seats_prices span.yellow:before{content:'';background: #FDF300;}
+  .hall_seats_prices span.beige:before{content:'';background: #FFBE8F;}
+
+  .hall_container_btn {text-align: center;}
+  .hall_container .btn{display: inline-block;}
+
+  #questionnaire{width:530px;height:500px;margin: 0 auto;position: relative;}
+  #questionnaire label{position: relative;margin-bottom: 10px;display: block;}
+  #questionnaire label>input,.questionnaire_select_container,.questionnaire_select_container_vup,.questionnaire_select_container_vdwn{width:100%;height: 56px;background: #ECF1F7;border: 1px solid #F69707;padding: 25px 10px 10px 10px;box-sizing: border-box;font-size: 15px;}
+  #questionnaire label>input::-webkit-input-placeholder{color: #333333;}
+  #questionnaire label>input::-moz-placeholder{color: #333333;}
+  #questionnaire label span, .questionnaire_select span{position: absolute;top:5px;left:11px;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:13px;color:#79818C;cursor: pointer;}
+  #questionnaire .btn{float: right;position: absolute;right: 0;top:420px;}
+
+  .questionnaire_select {position: relative;}
+  .questionnaire_select_data{position: absolute;display: none;background: #ECF1F7;width: 50%;margin-top: -1px;margin-left: 1px;padding: 10px;z-index: 1;}
+  .questionnaire_select_data .user_agreed span{margin-left: 10px;top:3px !important;color:#333333 !important;}
+  .questionnaire_select_container_vup {background: #ECF1F7 url(../img/questionnaire_select_container_vup.png) 95% center no-repeat;cursor: pointer;}
+  .questionnaire_select_container_vdwn {background: #ECF1F7 url(../img/questionnaire_select_container_vdwn.png) 95% center no-repeat;cursor: pointer;}
+
+  .questionnaire_select_data label>input[type="radio"]{width:14px !important;height: 14px !important;background: url(../img/radio_off.png) center center no-repeat !important;vertical-align: middle;margin-right: 5px;outline: none;border:0 !important;padding: 0 !important;}
+  .questionnaire_select_data label>input[type="radio"]:checked{background: url(../img/radio_on.png) center center no-repeat !important;}
+  .questionnaire_select label{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:13px;color:#333333;cursor: pointer;}
+
+  /*Контентная страница*/
+  .content_page p{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:16px;line-height: 24px;color:#fff;margin-bottom: 10px;}
+
+  /*Корзина*/
+  .cart_container {position: relative;background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);}
+  .cart_container h2{padding: 10px 0;text-align: left;}
+  .cart_tickets_container{width:100%;padding: 10px;background: #1C1B2F;border:1px solid #C4C4C4;box-sizing: border-box;}
+  .cart_tickets_info_block{margin-bottom: 30px;position: relative;}
+  .cart_tickets_info_block a{position: absolute;top:0;right: 0;width:12px;height: 12px;background: url(../img/tickets_close.png) center center no-repeat;cursor: pointer;}
+  .cart_tickets_info_block p, .cart_tickets_info_block ul{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:14px;line-height: 28px;color:#fff;}
+  .cart_tickets_info_remaining p{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color:#F69707;text-align: right;}
+  .cart_tickets_info_time ul li, .cart_tickets_info_val ul li{display: inline-block;margin-right: 20px;}
+  .cart_tickets_container label>input[type="radio"]{width:14px !important;height: 14px !important;background: url(../img/radio_off.png) center center no-repeat !important;vertical-align: middle;margin-right: 5px;outline: none;border:0 !important;padding: 0 !important;}
+  .cart_tickets_container label>input[type="radio"]:checked{background: url(../img/radio_on.png) center center no-repeat !important;}
+  .cart_tickets_container label{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color:#fff;cursor: pointer;}
+  .cart_tickets_container label p{font-size:12px;margin-bottom: 10px;}
+  .cart_tickets_container label label{margin-right: 20px;}
+
+  .payer_data label{display: inline-block;width:45%;border-bottom: 1px solid #F69707;position: relative;margin-bottom: 10px;}
+  .payer_data label:nth-child(even){float: right;}
+  .payer_data label:nth-child(5){display: inline-block;width:100%;border-bottom: 1px solid #F69707;position: relative;margin-bottom: 10px;margin-right: 8%;}
+  .payer_data p{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#fff;margin-bottom: 10px;}
+  .payer_data label input{background: transparent;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:16px;color:#fff;padding-top: 15px;border: 0;}
+  .payer_data label span{position: absolute;top:0;left: 0;}
+
+  .cart_promocode ul{float: right;display: inline-block;}
+  .cart_promocode ul li{display: inline-block;}
+  .cart_promocode ul li:nth-child(1){font-family: 'Montserrat', sans-serif;font-weight:400;font-size:13px;color:#fff;margin-right: 10px;width:100px;}
+  .cart_promocode ul li:nth-child(2){width:150px;}
+  .cart_promocode input[type="text"]{font-family: 'Montserrat', sans-serif;font-weight: 400;font-size: 10px;color: #fff;background: #1C1B2F;border: 0.7px solid #C4C4C4;box-sizing: border-box;width: 100%;padding: 10px;}
+  .cart_promocode .btn{padding: 10px 17px;font-size: 10px;margin-left: -5px;}
+
+  .cart_total p{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:13px;color:#fff;}
+
+  .cart_total{width:60%;float: right;}
+  .cart_total p:nth-child(even){float: right;margin-top: -16px;}
+
+  /* --> Кабинет организатора*/
+  .manager_menu_container{width: 100%;background: #0B0702;position: relative;}
+  .manager_menu_container ul {list-style:none;line-height:40px;}
+  .manager_menu_container ul>li{display: inline-block;margin-right: 20px;}
+  .manager_menu_container ul>li a{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color:#fff;cursor:pointer;padding:0 5px 5px 5px;text-decoration: none;}
+  .manager_accaunt_menu a:hover{border-bottom: 1px solid #F69707;}
+  .manager_accaunt_menu a.active{border-bottom: 1px solid #F69707;}
+  .manager_accaunt_menu{display: none;position:absolute;background:#0B0702;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color:#fff;z-index: 1;padding: 0 20px 20px 20px;}
+  .manager_accaunt_menu>li{display: block !important;margin-right:0 !important;}
+  .manager_content_container{padding-bottom: 50px;}
+  .manager_content_container h2{text-align: left !important;}
+  .manager_content_container h3{text-align: left !important;padding: 0;}
+  .manager_content_container legend, .manager_content_container label p{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 24px;color:#fff;}
+  .manager_content_container input[type="text"], .manager_content_container input[type="email"], .manager_content_container textarea{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 18px;color:#fff;background: #1C1B2F;border: 0.7px solid #C4C4C4;box-sizing: border-box;width:100%;padding: 10px;}
+  .manager_content_container input[type="date"]{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 18px;border: 0.7px solid #C4C4C4;box-sizing: border-box;width:100%;padding: 10px;}
+  .manager_content_container input[type="file"]{display: none;}
+  .f_name{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color: #000;background: rgba(255, 255, 255, 0.4);border: 1px solid #FFFFFF;box-sizing: border-box;display: inline-block;padding: 10px;cursor: pointer;}
+  .manager_file_input_description{font-size: 10px !important;}
+  .manager_content_container textarea{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 18px;border: 0.7px solid #C4C4C4;box-sizing: border-box;width:100%;height: 120px;padding: 10px;}
+  .manager_content_container .btn{float: left;}
+  .manager_withdraw {position: relative;;}
+  .manager_withdraw p{position: absolute;top:0;left: 150px;}
+  .manager_withdraw input{width:178px !important;}
+  .manager_finance_block{background: #C4C4C4;border: 1px solid #C4C4C4;padding: 10px;box-sizing: border-box;position: relative;}
+  .manager_finance_block label{font-family: 'Montserrat', sans-serif;font-weight:400;font-size: 12px;}
+  .manager_finance_block p{color: #000 !important;}
+  .income_block P:nth-child(n), .expenses_block P:nth-child(n){font-size: 14px;}
+  .income_block P:nth-child(even),.expenses_block P:nth-child(even){float: right;margin-top: -25px;}
+  .manager_income_download_btn{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 24px;color:#C4C4C4;text-decoration: none;padding: 5px 10px;margin-left: 5px;color:#fff;border-bottom: 1px solid #F69707;cursor: pointer;}
+
+    /* --> --> Отчеты */
+    .manager_report_calendar_icon{background:#1C1B2F url(../img/manager_calendar_icon.png) 97% 50% no-repeat !important;width:280px !important;cursor: pointer;}
+    .manager_report_download_btn{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 24px;color:#C4C4C4;text-decoration: none;padding: 5px 10px;margin-left: 5px;}
+    .manager_report_download_btn.active{color:#fff;border-bottom: 1px solid #F69707;}
+    input.active::-webkit-input-placeholder{color: #fff;}
+    input.disabled::-moz-placeholder{color: #C4C4C4;}
+
+    /* --> --> Возврат билетов */
+    .manager_return_tickets_title{display: -webkit-flex; display: flex;-webkit-justify-content: space-around;justify-content: space-around;-webkit-align-items: flex-start;align-items: flex-start;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#000;}
+    .manager_return_tickets_title div{ display: -webkit-inline-flex;display: inline-flex; margin: 0 auto;-webkit-flex-basis: 25%; flex-basis: 25%;}
+    .manager_return_tickets_val{ display: -webkit-flex; display: flex;-webkit-justify-content: space-around;justify-content: space-around;-webkit-align-items: flex-start;align-items: flex-start;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#000;}
+    .manager_return_tickets_val div{ display: -webkit-inline-flex;display: inline-flex; margin: 0 auto;-webkit-flex-basis: 25%; flex-basis: 25%;}
+    .manager_return_tickets_val ul{list-style: none;width: 100%;}
+    .manager_return_tickets_val .return_complete_text{font-size: 12px;padding: 10px 5px;color:#000;display: block;text-align: center;}
+    .manager_return_tickets_val .btn{font-size: 10px;padding: 10px 5px;color:#000;display: block;float: none;}
+    .manager_return_tickets_client_contacts{color:#000;margin-top: 5px;display: block;text-align: center;}
+
+    /* --> --> Договор */
+    .manager_second_line_menu{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#fff;line-height: 48px;}
+    .manager_second_line_menu li{float: left;margin-left: 10px;margin-right: 30px;}
+    .manager_second_line_menu li a{text-decoration: none;color: #fff;}
+    .manager_second_line_menu li.active a{color: #F69707;}
+    .manager_second_line_menu li.active {color: #F69707;}
+    .contract_block p{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px !important;color:#fff;line-height: 18px;margin-bottom: 10px;}
+    .contract_block input{background: rgba(236, 241, 247, 0.5) !important;border: 1px solid #BABABA !important;color: #000 !important;display: block;}
+    .contract_block input.success{background: rgba(236, 241, 247, 0.5) url(../img/contract_block_input_success_icon.png) 97% 50% no-repeat !important;}
+    .contract_block input.fail{background: rgba(236, 241, 247, 0.5) url(../img/contract_block_input_fail_icon.png) 97% 50% no-repeat !important;border: 1px solid #FF0000 !important;}
+    .contract_block .btn{float: right;margin-top: 40px;}
+
+    .manager_content_contract_confirmation_btns .btn:nth-child(1){float: left;}
+    .manager_content_contract_confirmation_btns_last_step .btn:nth-child(1){float: left;}
+    .manager_content_contract_confirmation_btns_last_step .btn{font-size: 13px;}
+
+    .manager_closing_acts_btn{display: block;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color: #000;text-decoration: none;}
+    .contract_block a.manager_closing_acts_btn:nth-child(2){margin-top: 10px;}
+    .contract_requisites_signature_needed{position: absolute;top:10px;right: -1px;background: #F69707;padding: 10px 20px;}
+    .contract_requisites_signature_needed p{font-weight: 600;margin: 0;}
+
+    .event_info_date_time_container{position: relative;}
+    .event_info_date_time{display: -webkit-flex; display: flex;-webkit-justify-content: space-between;justify-content: space-between;-webkit-align-items: flex-start;align-items: flex-start;}
+    .event_info_date_time_clone{position: absolute;top:12px;right:0;margin-right: -36px;width: 18px;height: 18px;background: url(../img/event_info_date_time_clone_icon.png) center center no-repeat;cursor: pointer;}
+    .event_info_date_time input{display: -webkit-inline-flex;display: inline-flex;-webkit-flex-basis: 48%; flex-basis: 48%;}
+    .event_info_date_time input{background: #1C1B2F url(../img/event_info_date_time_icon.png) 97% 50% no-repeat !important;}
+    .event_info_date_time_description{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color: #fff;margin: 5px 0 10px;}
+
+    #event_registration label{display: block;position: relative;}
+    #event_registration label label {margin-bottom: 10px;}
+    #event_registration label label span{position: absolute;top: 5px;left: 11px;font-family: 'Montserrat', sans-serif;font-weight: 400;font-size: 13px;color: #fff;cursor: pointer;}
+    #event_registration label label input{width: 100%;height: 56px;padding: 25px 10px 10px 10px;box-sizing: border-box;font-size: 12px;}
+
+    #event_registration label label input[type="text"]::-webkit-input-placeholder{color: #fff;}
+    #event_registration label label input[type="text"]::-moz-placeholder{color: #fff;}
 
 /*Подвал*/
 .page_up{position: absolute;right: -25px;top: -91px;z-index: 100;width: 17px;height: 17px;text-align: center;cursor:pointer;}
@@ -325,6 +570,7 @@ footer{background:#000;padding:30px 0;border-top: 2px solid #F69707;}
 .container_950 .grid_2{width:80px;margin-right:40px;}
 .container_950 .grid_3{width:120px;margin-right:40px;}
 .container_950 .grid_4{width:160px;margin-right:40px;}
+.container_950 .grid_4.fix{width:158px;margin-right:40px;}
 .container_950 .grid_5{width:200px;margin-right:40px;}
 .container_950 .grid_6{width:240px;margin-right:40px;}
 .container_950 .grid_7{width:280px;margin-right:40px;}
@@ -370,7 +616,11 @@ footer{background:#000;padding:30px 0;border-top: 2px solid #F69707;}
 	.event_page_event_info ul li:nth-child(2){margin-left:45px;width:200px;}
   .organizer_page_organizer_info ul li:nth-child(2){width:215px;}
 
-.event_order_btn{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+  .event_order_btn{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+
+    /* --> --> Договор */
+    .manager_content_contract_confirmation_btns .btn{padding: 10px 5px;}
+    .manager_content_contract_confirmation_btns_last_step .btn{padding: 10px 5px;font-size: 13px;}
 
 /*Подвал*/
 .footer_social_nav {width:84%;}
@@ -389,6 +639,7 @@ footer{background:#000;padding:30px 0;border-top: 2px solid #F69707;}
 .container_950 .grid_2{width:74px;margin-right:37px;}
 .container_950 .grid_3{width:111px;margin-right:37px;}
 .container_950 .grid_4{width:148px;margin-right:37px;}
+.container_950 .grid_4.fix{width:146px;margin-right:37px;}
 .container_950 .grid_5{width:185px;margin-right:37px;}
 .container_950 .grid_6{width:222px;margin-right:37px;}
 .container_950 .grid_7{width:259px;margin-right:37px;}
@@ -444,6 +695,16 @@ footer{background:#000;padding:30px 0;border-top: 2px solid #F69707;}
 	.event_page_event_info ul li:nth-child(2){margin-left:10px;width:200px;}
   .organizer_page_organizer_info ul li:nth-child(2){width:180px;}
 
+  /* --> Корзина*/
+  .cart_promocode ul li:nth-child(1){width:73px;}
+
+  /* --> Кабинет организатора*/
+  .manager_report_calendar_icon{width: 250px !important;}
+
+    /* --> --> Договор */
+    .manager_content_contract_confirmation_btns .btn{padding: 10px;font-size: 12px;}
+    .manager_content_contract_confirmation_btns_last_step .btn{padding: 10px;font-size: 11px;}
+
 /*Подвал*/
 .page_up{display:none;}
 .footer_social_nav {width:90%;}
@@ -488,6 +749,7 @@ footer{background:#000;padding:30px 0;border-top: 2px solid #F69707;}
 .container_950 .grid_2{width:100%;margin-right:0;}
 .container_950 .grid_3{width:33.3%;margin-right:0;}
 .container_950 .grid_4{width:100%;margin-right:0;}
+.container_950 .grid_4.fix{width:50%;margin-right:0;}
 .container_950 .grid_5{width:100%;margin-right:0;}
 .container_950 .grid_6{width:100%;margin-right:0;}
 .container_950 .grid_7{width:100%;margin-right:0;}
@@ -517,7 +779,7 @@ footer{background:#000;padding:30px 0;border-top: 2px solid #F69707;}
 .popup_menu{position:fixed;background: rgba(0, 0, 0, 0.9) none repeat scroll 0 0 / cover;height: 100%;overflow: hidden;width: 100%;z-index: 999;}
 .popup_menu_container{overflow-y: scroll;overflow-x: hidden;height: 100vh;width: 100vw;min-width:320px;position: absolute;top: 0;}
 .popup_menu_container ul{list-style:none;}
-.popup_menu_container a{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:18px;line-height:36px;color:#fff;text-decoration:none;}
+.popup_menu_container a{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:18px;line-height:36px;color:#fff;text-decoration:none;cursor: pointer;}
 .popup_menu_container div{width:70%;padding:30px;}
 .popup_menu_container div:nth-child(1){border-bottom: 1px solid #F69707;}
 .popup_menu_container div:nth-child(2){border-bottom: 1px solid #F69707;}
@@ -614,6 +876,47 @@ header{height:50px;background:#000;position:relative;}
 	.popular_events{background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);position:relative;}
 	.catalog_filter_container{padding:0 30px;box-sizing:border-box;position:relative;}
 	.catalog_playground_container{right:0;}
+  .catalog_filter_container ul, .filter_reset{display:none;}
+  .filter_mobile_events_amount{display: inline-block;line-height: 40px;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:14px;color:#fff;}
+  .filter_mobile_btn{background: url(../img/filter_mobile_icon.png) center center no-repeat;display: inline-block;float: right;width: 40px;height: 40px;cursor: pointer;}
+
+  .popup_filter{position:fixed;background: rgba(0, 0, 0, 1) none repeat scroll 0 0 / cover;height: 100%;overflow: hidden;width: 100%;z-index: 999;display: table;}
+  .popup_filter_container{display: table-cell;vertical-align: middle;}
+  .popup_filter_position{width:100%;padding:45px;box-sizing:border-box;min-width:320px;margin:0 auto;background:transparent;position:relative;}
+  .popup_filter_close{background:url(../img/login_close.png) center center no-repeat;width:30px;height:30px;position:absolute;top:-30px;right:45px;cursor:pointer;z-index:1;}
+  .popup_show_filter{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:24px;line-height: 48px;color:#fff;display: block;text-align: center;cursor: pointer;}
+  .popup_filter_val{border-bottom: 1px solid #F69707;padding-bottom: 20px;width:60%;margin:0 auto;}
+  .popup_filter_genre label{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:16px;line-height: 24px;color:#fff;display: inline-block;text-align: center;cursor: pointer;position: relative;padding: 0 5px;}
+  .popup_filter_genre li{text-align: center;}
+  .popup_filter_genre .inpt_chck{display: none;}
+  .inpt_chck:checked + .popup_filter_genre label {color: #F69707;}
+  .popup_filter_val>div{position: relative;}
+  .popup_filter_val>div input{width:100%;background: transparent;border: 1px solid #C4C4C4;box-sizing: border-box;height:40px;padding: 10px;color:#fff;font-size: 16px;}
+  .popup_filter_playgrounds_list span{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#fff;}
+  .popup_filter_reset{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 48px;color:#fff;cursor: pointer;text-align: center;display: block;}
+  .popup_filter .btn{width:60%;}
+
+  /* --> Страница пользователя*/
+  .user_content_container{position: relative;background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);width: auto;
+    min-width: 420px;margin: 0 auto;padding: 0 30px;}
+  .user_personal_recommends{width:80%;height:auto;margin: 0 auto;}
+  .user_menu_container{padding: 0 30px;box-sizing: border-box;}
+
+  /* --> Холл*/
+  .hall_menu_fix{position: relative;background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);padding: 30px 0;}
+  .hall_container_questionaire{position: relative;width: auto;min-width: 420px;margin: 30px;}
+  #questionnaire{width:100%;}
+
+  /* --> Корзина*/
+  .cart_container{position: relative;background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);width: auto;min-width: 420px;margin: 0 auto;padding: 0 30px;}
+  .cart_promocode ul{float: right;display: inline-block;}
+
+  /* --> Кабинет организатора */
+  .manager_content_container{padding: 0 30px 50px;min-width: 420px;}
+
+  /* --> --> Договор */
+  .manager_content_contract_confirmation_btns .btn{padding: 10px 20px;}
+  .manager_content_contract_confirmation_btns_last_step .btn{padding: 10px 15px;}
 
 /*Подвал*/
 footer{overflow:hidden;}
@@ -786,6 +1089,50 @@ header{height:50px;background:#000;position:relative;min-width:320px;}
   .organizer_page_organizer_btns_container div:nth-child(2){width:120px;}
   .organizer_page_description{min-width:260px;}
   .organizer_page_organizer_info .organizer_price{white-space: unset;}
+
+  /* --> Каталог */
+  .popup_filter_position{padding: 0 30px;}
+  .popup_filter_val{width:100%;}
+  .popup_filter_close{top:0;}
+
+  /* --> Страница пользователя*/
+  .user_content_container{min-width: 260px;}
+
+  /* --> Холл*/
+  #questionnaire label>input, .questionnaire_select_container, .questionnaire_select_container_vup, .questionnaire_select_container_vdwn{padding: 30px 10px 10px 10px;}
+  #questionnaire label span, .questionnaire_select span{font-size: 12px;line-height: 12px;}
+  #questionnaire .btn{width: 100%;}
+  .hall_container_questionaire{min-width: 260px;}
+
+  /* --> Корзина*/
+  .cart_container{min-width: 260px;}
+  .cart_promocode ul li:nth-child(1){width: 80px;}
+  .cart_promocode ul li:nth-child(2){width: 90px;}
+  .cart_promocode .btn{padding: 10px 5px;}
+
+  /* --> Кабинет организатора */
+  .manager_menu_container ul>li{margin-right: 10px;}
+  .manager_menu_container ul>li:last-child .manager_accaunt_menu{right: 0;}
+
+  .manager_content_container{min-width: 260px;}
+  .manager_report_calendar_icon{width: 180px !important;}
+
+  .manager_finance_block P:nth-child(n){font-size: 12px;}
+
+  .manager_withdraw input{width: 78px !important;}
+  .manager_withdraw p{left: 60px;}
+
+  .manager_return_tickets_title p{font-size: 10px !important;}
+  .manager_return_tickets_val p{font-size: 9px !important;}
+  .manager_return_tickets_val{font-size: 9px !important;}
+  .manager_return_tickets_val .return_complete_text{font-size: 9px;}
+  .manager_return_tickets_val .btn{font-size: 8px;}
+
+    /* --> --> Договор */
+    .manager_second_line_menu li {margin-right: 15px;}
+    .manager_second_line_menu{font-size: 10px;}
+    .manager_content_contract_confirmation_btns .btn{padding: 10px 2px;font-size: 10px;}
+    .manager_content_contract_confirmation_btns_last_step .btn{padding: 10px 5px;font-size: 9px;}
 
 /*Подвал*/
 .footer_nav{display:none;}

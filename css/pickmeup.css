@@ -1,13 +1,17 @@
 .pickmeup{border-radius:.4em;-moz-box-sizing:content-box;box-sizing:content-box;display:inline-block;position:absolute;touch-action:manipulation}
+.popup_filter_calendar .pickmeup{border-radius:.4em;-moz-box-sizing:content-box;box-sizing:content-box;display:block;position:absolute;touch-action:manipulation;}
+
 .pickmeup *{-moz-box-sizing:border-box;box-sizing:border-box}
 .pickmeup.pmu-flat{position:relative}
 .pickmeup.pmu-hidden{display:none}
 
-.main_menu .pickmeup .pmu-instance{display:inline-block;height:16em;padding:.5em 1.9em;text-align:center;width:17.3em;}
+.main_menu .pickmeup .pmu-instance{display:inline-block;height:256px;padding:20px;text-align:center;width:292px;}
 .catalog_filter_container .pickmeup .pmu-instance{display:inline-block;height:330px;padding:15px 30px;text-align:center;width:228px;}
+.popup_filter_calendar .pickmeup .pmu-instance{display:block;padding:15px 30px;text-align:center;width:256px;margin: 0 auto;}
 
 .main_menu .pickmeup .pmu-instance .pmu-button{color:#fff;cursor:pointer;outline:none;text-decoration:none;font-family: 'Montserrat', sans-serif;font-weight:600;font-size:15px;text-align:center;}
 .catalog_filter_container .pickmeup .pmu-instance .pmu-button{color:#fff;cursor:pointer;outline:none;text-decoration:none;font-family: 'Montserrat', sans-serif;font-weight:600;font-size:12px;text-align:center;vertical-align:bottom;width:24px;}
+.popup_filter_calendar .pickmeup .pmu-instance .pmu-button{color:#fff;cursor:pointer;outline:none;text-decoration:none;font-family: 'Montserrat', sans-serif;font-weight:600;font-size:16px;text-align:center;vertical-align:bottom;width:28px;}
 
 .pickmeup .pmu-instance .pmu-today{color:#F69707}
 .pickmeup .pmu-instance .pmu-button:hover{background:transparent;color:#F69707}
@@ -17,9 +21,11 @@
 .pickmeup .pmu-instance .pmu-selected{background: rgba(255, 255, 255, 0.2);color:#fff;border-radius: 6px;}
 .pickmeup .pmu-instance .pmu-not-in-month.pmu-selected{background:#17384d}
 
-.main_menu .pickmeup .pmu-instance nav{color:#eee;display:-ms-flexbox;display:-webkit-flex;display:flex;line-height:2em;}
+.main_menu .pickmeup .pmu-instance nav{color:#eee;display:inline-block;}
 .catalog_filter_container .pickmeup .pmu-instance nav{color:#eee;display:-ms-flexbox;display:-webkit-flex;display:flex;line-height:2em;margin-bottom:10px;}
 .catalog_filter_container .pickmeup .pmu-instance nav.pmu-day-of-week{margin-bottom:0px;}
+.popup_filter_calendar .pickmeup .pmu-instance nav{color:#eee;display:-ms-flexbox;display:-webkit-flex;display:flex;line-height:2em;margin-bottom:10px;}
+.popup_filter_calendar .pickmeup .pmu-instance nav.pmu-day-of-week{margin-bottom:0px;}
 
 .pickmeup .pmu-instance nav *:first-child :hover{color:#F69707}
 .pickmeup .pmu-instance nav .pmu-prev,.pickmeup .pmu-instance nav .pmu-next{display:none;height:2em;width:1em}
@@ -28,19 +34,23 @@
 
 .main_menu .pickmeup .pmu-instance .pmu-day-of-week{color:#fff;cursor:default;font-family: 'Montserrat', sans-serif;font-weight:600;font-size:15px;text-align:center;}
 .catalog_filter_container .pickmeup .pmu-instance .pmu-day-of-week{color:#fff;cursor:default;font-family: 'Montserrat', sans-serif;font-weight:600;font-size:10px;text-align:center;}
+.popup_filter_calendar .pickmeup .pmu-instance .pmu-day-of-week{color:#fff;cursor:default;font-family: 'Montserrat', sans-serif;font-weight:600;font-size:15px;text-align:center;}
 
-.main_menu .pickmeup .pmu-instance .pmu-day-of-week *,.pickmeup .pmu-instance .pmu-days *{display:inline-block;line-height:2em;width:2em}
+.main_menu .pickmeup .pmu-instance .pmu-day-of-week *,.pickmeup .pmu-instance .pmu-days *{display:inline-block;line-height:36px;width:36px;}
 .catalog_filter_container .pickmeup .pmu-instance .pmu-day-of-week *,.pickmeup .pmu-instance .pmu-days *{display:inline-block;line-height:2em;width:2.4em;}
+.popup_filter_calendar .pickmeup .pmu-instance .pmu-day-of-week *,.pickmeup .pmu-instance .pmu-days *{display:inline-block;line-height:24px;width:36px;}
 
 .pickmeup .pmu-instance .pmu-day-of-week *{line-height:2em;text-align:center;}
-.pickmeup .pmu-instance:first-child .pmu-prev,.pickmeup .pmu-instance:last-child .pmu-next{display:block}
+.pickmeup .pmu-instance:first-child .pmu-prev,.pickmeup .pmu-instance:last-child .pmu-next{display:inline-block;}
+.pmu-month{display:inline-block;}
 .pmu-prev{display:block;background:url(../img/calendar_arrow_left.png) center center no-repeat;}
 .pickmeup .pmu-instance .pmu-prev:hover{display:block;background:url(../img/calendar_arrow_left_hvr.png) center center no-repeat;}
 .pmu-next{display:block;background:url(../img/calendar_arrow_right.png) center center no-repeat;}
 .pickmeup .pmu-instance .pmu-next:hover{display:block;background:url(../img/calendar_arrow_right_hvr.png) center center no-repeat;}
 .pickmeup .pmu-instance:first-child .pmu-month,.pickmeup .pmu-instance:last-child .pmu-month{width:13em}
 
-.main_menu .pickmeup .pmu-instance:first-child:last-child .pmu-month{width:12em;line-height:30px;}
+.main_menu .pickmeup .pmu-instance:first-child:last-child .pmu-month{width:140px;line-height:30px;vertical-align: top;}
 .catalog_filter_container .pickmeup .pmu-instance:first-child:last-child .pmu-month{width:12em;line-height:24px;}
+.popup_filter_calendar .pickmeup .pmu-instance:first-child:last-child .pmu-month{width:140px;}
 
 .pickmeup:not(.pmu-view-days) .pmu-days,.pickmeup:not(.pmu-view-days) .pmu-day-of-week,.pickmeup:not(.pmu-view-months) .pmu-months,.pickmeup:not(.pmu-view-years) .pmu-years{display:none}

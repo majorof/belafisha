@@ -11,18 +11,19 @@
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-<link rel="stylesheet" type="text/css" href="css/pickmeup.css"/>
+<link rel="stylesheet" type="text/css" href="css/datepicker.min.css"/>
 <link rel="icon" href="favicon.png" type="image/x-icon" />
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap&subset=cyrillic" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
-<script type="text/javascript" src="js/pickmeup.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.12.1.js"></script>
 <script type="text/javascript" src="js/jquery.nicescroll.js"></script>
 <script type="text/javascript" src="js/readmore.min.js"></script>
+<script type="text/javascript" src="js/datepicker.min.js"></script>
+<script type="text/javascript" src="js/panzoom.js"></script>
 
 </head>
 <body>
@@ -98,10 +99,12 @@
 							</div>
 							<div class="agreed top_20">
 								<label>
-									<input type="checkbox" checked>
-									<div class="checkbox_custom"></div>
+									<div>
+										<input type="checkbox" checked>
+										<div class="checkbox_custom"></div>
+									</div>
+									<span>Я согласен на обработку персональных данных</span>
 								</label>
-								<span>Я согласен на обработку персональных данных</span>
 							</div>
 							<input class="registration_form_btn" type="button" value="Зарегистрироваться" />
 						</form>
@@ -114,7 +117,7 @@
 		<header class="container_950 overflow_hidden header_desctop">
 			<div class="wrapper">
 				<div class="grid_7">
-					
+
 						<div class="logo_container">
 							<ul>
 								<li><a>Санкт-Петербург</a></li>
@@ -129,7 +132,7 @@
 						<div class="logo_container">
 							<a href="index.html" class="logo"><img src="img/logo.png" alt="" /></a>
 						</div>
-					
+
 				</div>
 				<div class="grid_7">
 					<ul class="header_nav">
@@ -142,7 +145,7 @@
 						<div class="site_search_btn">
 							<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path opacity="0.54" fill-rule="evenodd" clip-rule="evenodd" d="M10.0073 8.80453H9.37176L9.15083 8.58522C9.93128 7.67515 10.4059 6.49534 10.4059 5.20268C10.4059 2.3292 8.07662 0 5.20297 0C2.32933 0 0 2.3292 0 5.20268C0 8.07615 2.32933 10.4054 5.20297 10.4054C6.49571 10.4054 7.67479 9.93151 8.58491 9.15191L8.80583 9.37122V10.0051L12.8065 14L14 12.8066L10.0073 8.80453ZM5.20295 8.80453C3.21301 8.80453 1.60089 7.1925 1.60089 5.20268C1.60089 3.21365 3.21301 1.60082 5.20295 1.60082C7.19209 1.60082 8.80501 3.21365 8.80501 5.20268C8.80501 7.1925 7.19209 8.80453 5.20295 8.80453Z" fill="#766D6D"/>
-							</svg>						
+							</svg>
 						</div>
 					</div>
 				</div>
@@ -192,16 +195,16 @@
 							</ul>
 						</ul>
 						<div class="calendar_container">
-							<a class="calendar_vdwn calendar_btn">Календарь мероприятий</a>
+							<a id="calendar_btn" class="calendar_vdwn">Календарь мероприятий</a>
 							<div class="calendar">
-								<div class="single"></div>
+								<div class="datepicker-here" data-multiple-dates="999"></div>
 								<input type="button" class="btn top_40" value="Найти билеты">
 							</div>
 						</div>
 					</div>
 				</div>
 		</nav>
-		
+
 		<div class="event_page">
 			<div class="container_950 overflow_hidden">
 				<div class="wrapper">
@@ -211,7 +214,7 @@
 								<li><p><img src="img/events/event_001.png" alt="" /></p></li>
 								<li>
 									<p class="event_title">"Идеальный свидетель"</p>
-									<p><input id="datepicker" type="text" value="выберите дату" /></p>
+									<p><input class="datepicker-here" type="text" data-auto-close="true" value="выберите дату" /></p>
 									<p class="event_address">Театр комедии им. Н.П. Акимова, Санкт-Петербург, Невский пр., д. 56</p>
 									<p class="event_price">Стоимость билетов: 800-2500 <span>Р</span></p>
 									<p class="event_organizer">Организатор: <a href="organizer_page.html">ИП Юрьев А.Ю.</a></p>
@@ -221,10 +224,10 @@
 					</div>
 					<div class="grid_7 top_40">
 						<div class="event_page_event_btns_container">
-							<div><a class="btn">Купить билет</a></div>
+							<div><a class="btn" href="hall.html">Купить билет</a></div>
 							<div><a class="btn_grey top_10">Проверить</a></div>
 							<p class="event_page_age_restrictions top_40">16+</p>
-						</div>					
+						</div>
 					</div>
 					<div class="grid_19">
 						<div class="event_page_description">
@@ -248,39 +251,39 @@
 							<div>
 								<div class="slide_wrap">
 									<iframe width="100%" height="375" src="https://www.youtube.com/embed/HdXD0oPRarE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								</div>			
+								</div>
 							</div>
 							<div>
 								<div class="slide_wrap">
 									<img src="img/slide_01.png" alt="" />
-								</div>			
+								</div>
 							</div>
 							<div>
 								<div class="slide_wrap">
 									<img src="img/slide_01.png" alt="" />
-								</div>			
+								</div>
 							</div>
 							<div>
 								<div class="slide_wrap">
 									<img src="img/slide_01.png" alt="" />
-								</div>			
+								</div>
 							</div>
 							<div>
 								<div class="slide_wrap">
 									<img src="img/slide_01.png" alt="" />
-								</div>			
+								</div>
 							</div>
 							<div>
 								<div class="slide_wrap">
 									<img src="img/slide_01.png" alt="" />
-								</div>			
+								</div>
 							</div>
 							<div>
 								<div class="slide_wrap">
 									<img src="img/slide_01.png" alt="" />
-								</div>			
-							</div>				
-						</div>						
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="grid_19 top_40">
 						<div class="event_page_feedbacks_container">
@@ -313,7 +316,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<footer>
 			<div class="container_950">
 				<a class="page_up">
@@ -360,7 +363,7 @@
 					</div>
 				</div>
 			</div>
-		</footer>		
+		</footer>
 </section>
 </body>
 </html>
