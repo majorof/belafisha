@@ -27,6 +27,7 @@
 <script type="text/javascript" src="../js/datepicker.min.js"></script>
 <script type="text/javascript" src="../js/panzoom.js"></script>
 <script type="text/javascript" src="../js/select2.min.js"></script>
+<script type="text/javascript" src="../js/select2.min.js"></script>
 
 </head>
 <body id="user">
@@ -235,99 +236,96 @@
 						<li>
 							<a class="manager_accaunt_menu_show">События</a>
 							<ul class="manager_accaunt_menu">
-								<li><a href="event_info.html" class="active">Создать новое событие</a></li>
-								<li><a href="event_.html">Ваши события</a></li>
+								<li><a href="event_info.html">Создать новое событие</a></li>
+								<li><a href="your_events.html" class="active">Ваши события</a></li>
 							</ul>
 						</li>
 					</ul>
 				</div>
 		</div>
 		<div class="manager_content_container">
-			<div class="container_950 overflow_hidden">
-				<div class="wrapper">
-					<div class="grid_19">
-						<ol class="manager_second_line_menu">
-							<li class="active"><a href="event_info.html">Информация</a></li>
-							<li><a href="event_registration.html">Регистрация</a></li>
-							<li><a href="event_tickets.html">Билеты</a></li>
-							<li><a href="event_publications_config.html">Настройки&nbsp;публикации</a></li>
-						</ol>
-						<div class="clearfix"></div>
-						<h2>Создание события</h2>
+			<div class="container_950">
+					<div class="grid_7">
+						<div class="your_events_search_container top_40">
+							<input class="your_events_search" type="search" placeholder="Поиск по событиям" />
+							<button></button>
+							<div class="clearfix"></div>
+						</div>
 					</div>
-					<div class="grid_9">
-						<form>
-							<label>
-								<legend>Название*</legend>
-								<input type="text" placeholder="Новое событие"/>
-							</label>
-							<label>
-								<legend>Описание события</legend>
-								<textarea type="text" placeholder="Введите текст"></textarea>
-							</label>
-							<div class="event_info_date_time_container top_10">
-								<div class="event_info_date_time_cloning">
-									<div id="event_info_date_time" class="event_info_date_time">
-										<input type="text" class="datepicker-here" data-timepicker="true" placeholder="01.01.1970 __:__" />
-										<input type="text" class="datepicker-here" data-timepicker="true" placeholder="01.01.1970 __:__" />
-									</div>
-								</div>
-								<div class="event_info_date_time_clone"></div>
-								<p class="event_info_date_time_description">Поставьте произвольную дату в будущем, если событие с открытой датой</p>
-							</div>
-							<label>
-								<legend>Город*</legend>
-								<input type="text" />
-								<div class="user_agreed">
-									<label>
-										<div>
-											<input type="checkbox" />
-											<div class="checkbox_custom"></div>
-										</div>
-										<span>У события может не быть города</span>
-									</label>
-								</div>
-							</label>
-							<label>
-								<legend>Категория события*</legend>
-								<select class="event_info_select" name="event_info_event_category">
-								  <option value="">Театр</option>
-								  <option value="">Концерт</option>
-								  <option value="">Фестиваль</option>
-								  <option value="">Кино</option>
-								  <option value="">Другое</option>
-								</select>
-							</label>
-							<label>
-								<legend>Афиша события</legend>
-								<input class="manager_file_input" type="file">
-								<div class="f_name">Выбрать изображение</div>
-								<p class="manager_file_input_description">Используйте файлы формата .png .jpg .gif  размер 248*351</p>
-							</label>
-							<label>
-								<legend>Фотографии события</legend>
-								<input class="manager_file_input" type="file">
-								<div class="f_name">Выбрать изображение</div>
-								<p class="manager_file_input_description">Используйте файлы формата .png .jpg .gif</p>
-							</label>
-							<label>
-								<legend>Видео события</legend>
-								<input type="text" />
-								<p class="manager_file_input_description">Вставьте ссылку на видео на YouTube</p>
-							</label>
-							<div class="user_agreed top_20">
-								<label>
-									<div>
-										<input type="checkbox" checked="">
-										<div class="checkbox_custom"></div>
-									</div>
-									<span>Я согласен на обработку персональных данных</span>
-								</label>
-							</div>
-							<a href="event_registration.html" class="btn top_20">Продолжить</a>
-						</form>
+					<div class="clearfix"></div>
+					<div class="grid_10">
+						<h2>Активные события</h2>
+						<div class="your_events_block your_active_events">
+							<ul>
+								<li>
+									<ul>
+										<li class="your_events_title">Музыкально-драматический спектакль «Неужели это было»</li>
+										<li class="your_events_place_date">Санкт-Петербург, 7 октября 2019, начало в 19:00</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li>125 билетов</li>
+										<li><a href="">страница</a></li>
+										<li>редактировать</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="your_events_block your_active_events">
+							<ul>
+								<li>
+									<ul>
+										<li class="your_events_title">Музыкально-драматический спектакль «Неужели это было»</li>
+										<li class="your_events_place_date">Санкт-Петербург, 7 октября 2019, начало в 19:00</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li>125 билетов</li>
+										<li><a href="">страница</a></li>
+										<li>редактировать</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<h2>Прошедшие события</h2>
+						<div class="your_events_block your_past_events">
+							<ul>
+								<li>
+									<ul>
+										<li class="your_events_title">Музыкально-драматический спектакль «Неужели это было»</li>
+										<li class="your_events_place_date">Санкт-Петербург, 7 октября 2019, начало в 19:00</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li>125 билетов</li>
+										<li><a href="">страница</a></li>
+										<li>перезапустить</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="your_events_block your_past_events">
+							<ul>
+								<li>
+									<ul>
+										<li class="your_events_title">Музыкально-драматический спектакль «Неужели это было»</li>
+										<li class="your_events_place_date">Санкт-Петербург, 7 октября 2019, начало в 19:00</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li>125 билетов</li>
+										<li><a href="">страница</a></li>
+										<li>перезапустить</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
 					</div>
-				</div>
+				<div class="clearfix"></div>
 			</div>
 		</div>
 		<footer>

@@ -27,6 +27,7 @@
 <script type="text/javascript" src="../js/datepicker.min.js"></script>
 <script type="text/javascript" src="../js/panzoom.js"></script>
 <script type="text/javascript" src="../js/select2.min.js"></script>
+<script type="text/javascript" src="../js/select2.min.js"></script>
 
 </head>
 <body id="user">
@@ -236,98 +237,64 @@
 							<a class="manager_accaunt_menu_show">События</a>
 							<ul class="manager_accaunt_menu">
 								<li><a href="event_info.html" class="active">Создать новое событие</a></li>
-								<li><a href="event_.html">Ваши события</a></li>
+								<li><a href="your_events.html">Ваши события</a></li>
 							</ul>
 						</li>
 					</ul>
 				</div>
 		</div>
 		<div class="manager_content_container">
-			<div class="container_950 overflow_hidden">
-				<div class="wrapper">
+			<div class="container_950">
+
 					<div class="grid_19">
 						<ol class="manager_second_line_menu">
-							<li class="active"><a href="event_info.html">Информация</a></li>
+							<li><a href="event_info.html">Информация</a></li>
 							<li><a href="event_registration.html">Регистрация</a></li>
 							<li><a href="event_tickets.html">Билеты</a></li>
-							<li><a href="event_publications_config.html">Настройки&nbsp;публикации</a></li>
+							<li class="active"><a href="event_publications_config.html">Настройки&nbsp;публикации</a></li>
 						</ol>
 						<div class="clearfix"></div>
-						<h2>Создание события</h2>
+						<h2>Настройки публикации</h2>
 					</div>
-					<div class="grid_9">
-						<form>
-							<label>
-								<legend>Название*</legend>
-								<input type="text" placeholder="Новое событие"/>
-							</label>
-							<label>
-								<legend>Описание события</legend>
-								<textarea type="text" placeholder="Введите текст"></textarea>
-							</label>
-							<div class="event_info_date_time_container top_10">
-								<div class="event_info_date_time_cloning">
-									<div id="event_info_date_time" class="event_info_date_time">
-										<input type="text" class="datepicker-here" data-timepicker="true" placeholder="01.01.1970 __:__" />
-										<input type="text" class="datepicker-here" data-timepicker="true" placeholder="01.01.1970 __:__" />
-									</div>
-								</div>
-								<div class="event_info_date_time_clone"></div>
-								<p class="event_info_date_time_description">Поставьте произвольную дату в будущем, если событие с открытой датой</p>
-							</div>
-							<label>
-								<legend>Город*</legend>
-								<input type="text" />
-								<div class="user_agreed">
+					<div class="clearfix"></div>
+					<div class="grid_10">
+						<div class="event_registration_container">
+							<div class="event_publications_config_container">
+								<form id="event_registration">
 									<label>
-										<div>
-											<input type="checkbox" />
-											<div class="checkbox_custom"></div>
-										</div>
-										<span>У события может не быть города</span>
+										<legend>Возрастные ограничения*</legend>
+										<select class="event_info_select" name="event_info_event_category">
+										  <option value="">0+</option>
+										  <option value="">6+</option>
+										  <option value="">12+</option>
+										  <option value="">16+</option>
+										</select>
 									</label>
-								</div>
-							</label>
-							<label>
-								<legend>Категория события*</legend>
-								<select class="event_info_select" name="event_info_event_category">
-								  <option value="">Театр</option>
-								  <option value="">Концерт</option>
-								  <option value="">Фестиваль</option>
-								  <option value="">Кино</option>
-								  <option value="">Другое</option>
-								</select>
-							</label>
-							<label>
-								<legend>Афиша события</legend>
-								<input class="manager_file_input" type="file">
-								<div class="f_name">Выбрать изображение</div>
-								<p class="manager_file_input_description">Используйте файлы формата .png .jpg .gif  размер 248*351</p>
-							</label>
-							<label>
-								<legend>Фотографии события</legend>
-								<input class="manager_file_input" type="file">
-								<div class="f_name">Выбрать изображение</div>
-								<p class="manager_file_input_description">Используйте файлы формата .png .jpg .gif</p>
-							</label>
-							<label>
-								<legend>Видео события</legend>
-								<input type="text" />
-								<p class="manager_file_input_description">Вставьте ссылку на видео на YouTube</p>
-							</label>
-							<div class="user_agreed top_20">
-								<label>
-									<div>
-										<input type="checkbox" checked="">
-										<div class="checkbox_custom"></div>
-									</div>
-									<span>Я согласен на обработку персональных данных</span>
-								</label>
+									<label class="top_10">
+										<legend>Настройки приватности</legend>
+										<label>
+											<input name="event_registration_custom_answer_type" type="radio">
+											Публичное событие
+											<p>Публичное событие будет размещено на витрине событий МояАфиша и партнеров сервиса. Непубличное будет доступно только по прямой ссылке. Пожалуйста, не делайте публичными тестовые или не до конца оформленные события.</p>
+										</label>
+										<label>
+											<input name="event_registration_custom_answer_type" type="radio">
+											Событие доступно по прямой ссылке
+											<p>Событие не будет размещено на витрине событий МояАфиша и партнеров сервиса и будет доступно только по прямой ссылке.</p>
+										</label>
+										<label>
+											<input name="event_registration_custom_answer_type" type="radio">
+											Полностью скрытое событие
+											<p>Событие будет видно только администраторам вашей организации. Посетителям будет отображаться ошибка «Событие не найдено».</p>
+										</label>
+									</label>
+								</form>
+								<a class="btn top_20" href="event_tickets.html">Вернуться</a>
+								<a class="btn top_20" href="">Опубликовать</a>
 							</div>
-							<a href="event_registration.html" class="btn top_20">Продолжить</a>
-						</form>
+						</div>
 					</div>
-				</div>
+				<div class="clearfix"></div>
 			</div>
 		</div>
 		<footer>

@@ -488,6 +488,8 @@ header{height:116px;}
 		.manager_report_download_btn{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 24px;color:#C4C4C4;text-decoration: none;padding: 5px 10px;margin-left: 5px;}
 		.manager_report_download_btn.active{color:#fff;border-bottom: 1px solid #F69707;}
 		input.active::-webkit-input-placeholder{color: #fff;}
+		input.active::-moz-placeholder{color: #fff;}
+		input.disabled::-webkit-input-placeholder{color: #C4C4C4;}
 		input.disabled::-moz-placeholder{color: #C4C4C4;}
 
 		/* --> --> Возврат билетов */
@@ -521,6 +523,7 @@ header{height:116px;}
 		.contract_requisites_signature_needed{position: absolute;top:10px;right: -1px;background: #F69707;padding: 10px 20px;}
 		.contract_requisites_signature_needed p{font-weight: 600;margin: 0;}
 
+    /* --> --> Новое событие*/
 		.event_info_date_time_container{position: relative;}
 		.event_info_date_time{display: -webkit-flex; display: flex;-webkit-justify-content: space-between;justify-content: space-between;-webkit-align-items: flex-start;align-items: flex-start;}
 		.event_info_date_time_clone{position: absolute;top:12px;right:0;margin-right: -36px;width: 18px;height: 18px;background: url(../img/event_info_date_time_clone_icon.png) center center no-repeat;cursor: pointer;}
@@ -544,17 +547,17 @@ header{height:116px;}
 		.event_registration_select_data label>input[type="radio"]{width:14px !important;height: 14px !important;background: url(../img/radio_off.png) center center no-repeat !important;vertical-align: middle;margin-right: 5px;outline: none;border:0 !important;padding: 0 !important;}
 		.event_registration_select_data label>input[type="radio"]:checked{background: url(../img/radio_on.png) center center no-repeat !important;}
 		.event_registration_select label{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:13px;color:#fff;cursor: pointer;}
-		
+
 		.event_registration_select_title{position: absolute;line-height:40px;left:11px;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:13px;color:#fff;cursor: pointer;}
-		
+
 		.event_registration_select_data label input{border:0 !important;padding:0 !important;}
 		.event_registration_select_data_line{border-bottom:1px solid #C4C4C4;}
-		
+
 		.event_registration_container .btn{margin-right:10px;}
-		
+
 		.event_registration_select_data .btn_grey{display:inline-block;float:right;color:#000;}
 		.event_registration_select_data .btn_grey:hover{color:#fff;}
-	
+
 
 		.toggle{position: relative;display: block;width: 40px;height: 20px;cursor: pointer;-webkit-tap-highlight-color: transparent;transform: translate3d(0,0,0);}
 		.toggle:before{content: "";position: relative;top: 3px;left: 3px;width: 34px;height: 14px;display: block;background: rgba(255,255,255,.5);border-radius: 8px;transition: background .2s ease;}
@@ -566,10 +569,41 @@ header{height:116px;}
 		#cbx:checked + .toggle span:before{transform: scale(1);opacity: 0;transition: all .4s ease;}
 
 		.event_registration_toogle{position: absolute;top: calc(50% + 18px);left: calc(50% - 60px);}
-		
+
 		.manager_content_container_inputs_disabled{border: 0.7px solid #646464 !important;}
 
-	
+    .event_publications_config_container label>input[type="radio"]{width:14px !important;height: 14px !important;background: url(../img/radio_off.png) center center no-repeat !important;vertical-align: middle;margin-right: 5px;outline: none;border:0 !important;padding: 0 !important;}
+		.event_publications_config_container label>input[type="radio"]:checked{background: url(../img/radio_on.png) center center no-repeat !important;}
+    .event_publications_config_container label{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:14px;color:#fff;cursor: pointer;}
+    .event_publications_config_container label p{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 18px;color:#fff;cursor: pointer;padding-left: 23px;margin: 5px 0 15px;}
+
+    /* --> --> Ваши события*/
+    .your_events_search_container{position: relative;}
+    .your_events_search_container button{background:#1C1B2F url(../img/your_events_search.png) center center no-repeat !important;width:18px;height: 18px;position: absolute;border: 0;cursor: pointer;top:50%;margin-top: -9px;right:9px;}
+    .your_events_search{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 18px;color:#fff;background: #1C1B2F;border: 0.7px solid #C4C4C4;box-sizing: border-box;width:100%;padding: 10px;}
+    .your_events_search::-webkit-input-placeholder{color: #fff;}
+		.your_events_search::-moz-placeholder{color: #fff;}
+    .your_events_block{width:100%;border: 1px solid #C4C4C4;background: #1C1B2F;padding: 10px;box-sizing: border-box;margin-bottom: 5px;}
+    .your_events_block ul {list-style: none;}
+    .your_events_block>ul {display: -webkit-inline-flex;display: inline-flex;-webkit-justify-content: space-between;justify-content: space-between;height: 100%;}
+    .your_events_block>ul>li{min-width: 100px;}
+    .your_events_block>ul>li:first-child {margin-right: 20px;}
+    .your_events_block ul>li>ul{display: -webkit-flex;display: flex;flex-direction: column;-webkit-justify-content: space-between;justify-content: space-between;height: 100%;}
+    .your_events_block ul>li>ul>li, .your_events_block ul>li>ul>li a{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:10px;color:#fff;display: inline-block;vertical-align: middle;text-decoration: none;}
+    .your_events_block ul>li>ul>li.your_events_title{font-size:14px;}
+    .your_events_block ul>li>ul>li.your_events_place_date{font-size:12px;margin-top: 20px;}
+
+    .your_active_events>ul>li:last-child ul>li:first-child:before {content: '';width:12px;height: 8px;background: url(../img/your_events_block_tickets_icon.png) center center no-repeat;display: inline-block;margin-right: 5px;vertical-align: middle;}
+    .your_active_events>ul>li:last-child ul>li:nth-child(2):before {content: '';width:12px;height: 12px;background: url(../img/your_events_block_tickets_page.png) center center no-repeat;display: inline-block;margin-right: 5px;vertical-align: middle;}
+    .your_active_events>ul>li:last-child ul>li:last-child:before {content: '';width:12px;height: 12px;background: url(../img/your_events_block_tickets_edit.png) center center no-repeat;display: inline-block;margin-right: 5px;vertical-align: middle;cursor: pointer;}
+    .your_active_events>ul>li:last-child ul>li:last-child {cursor: pointer;}
+
+    .your_past_events>ul>li:last-child ul>li:first-child:before {content: '';width:12px;height: 8px;background: url(../img/your_events_block_tickets_icon.png) center center no-repeat;display: inline-block;margin-right: 5px;vertical-align: middle;}
+    .your_past_events>ul>li:last-child ul>li:nth-child(2):before {content: '';width:12px;height: 12px;background: url(../img/your_events_block_tickets_page.png) center center no-repeat;display: inline-block;margin-right: 5px;vertical-align: middle;}
+    .your_past_events>ul>li:last-child ul>li:last-child:before {content: '';width:12px;height: 12px;background: url(../img/your_events_block_tickets_refresh.png) center center no-repeat;display: inline-block;margin-right: 5px;vertical-align: middle;cursor: pointer;}
+    .your_past_events>ul>li:last-child ul>li:last-child {cursor: pointer;}
+
+
 /*Подвал*/
 .page_up{position: absolute;right: -25px;top: -91px;z-index: 100;width: 17px;height: 17px;text-align: center;cursor:pointer;}
 footer{background:#000;padding:30px 0;border-top: 2px solid #F69707;}
