@@ -27,6 +27,7 @@
 <script type="text/javascript" src="../js/datepicker.min.js"></script>
 <script type="text/javascript" src="../js/panzoom.js"></script>
 <script type="text/javascript" src="../js/select2.min.js"></script>
+<script type="text/javascript" src="../js/select2.min.js"></script>
 
 </head>
 <body id="user">
@@ -236,15 +237,15 @@
 							<a class="manager_accaunt_menu_show">События</a>
 							<ul class="manager_accaunt_menu">
 								<li><a href="event_info.html" class="active">Создать новое событие</a></li>
-								<li><a href="event_.html">Ваши события</a></li>
+								<li><a href="your_events.html">Ваши события</a></li>
 							</ul>
 						</li>
 					</ul>
 				</div>
 		</div>
 		<div class="manager_content_container">
-			<div class="container_950 overflow_hidden">
-				<div class="wrapper">
+			<div class="container_950">
+				
 					<div class="grid_19">
 						<ol class="manager_second_line_menu">
 							<li><a href="event_info.html">Информация</a></li>
@@ -254,69 +255,74 @@
 						</ol>
 						<div class="clearfix"></div>
 						<h2>Регистрация на событие</h2>
+						<div class="event_registration_toogle">
+						  <input type="checkbox" id="cbx" checked style="display:none"/>
+						  <label for="cbx" class="toggle"><span></span></label>    
+						</div>
 					</div>
+					<div class="clearfix"></div>
 					<div class="grid_9">
-						<form id="event_registration">
-							<label>
-								<legend>Текст перед анкетой регистрации</legend>
-								<textarea type="text" placeholder="Введите текст"></textarea>
-							</label>
-							<label>
-								<legend>Вопросы анкеты*</legend>
-								<label><span>E-mail</span><input type="text" placeholder="Произвольный ответ"></label>
-							</label>
-							<label>
-								<label><span>Фамилия</span><input type="text" placeholder="Произвольный ответ"></label>
-							</label>
-							<label>
-								<label><span>Имя</span><input type="text" placeholder="Произвольный ответ"></label>
-							</label>
-							<div class="questionnaire_select">
-								<span>Добавить вопрос</span>
-								<div class="questionnaire_select_container_vup">
-									<p>-</p>
-								</div>
-								<div class="questionnaire_select_data" style="display: block;">
-									<div class="user_agreed">
-										<label>
-											<div>
-												<input type="checkbox" checked="" name="poll_01">
-												<div class="checkbox_custom"></div>
-											</div>
-											<span>Да</span>
-										</label>
-									</div>
-									<div class="user_agreed">
-										<label>
-											<div>
-												<input type="checkbox" checked="" name="poll_01">
-												<div class="checkbox_custom"></div>
-											</div>
-											<span>Нет</span>
-										</label>
-									</div>
-									<div class="user_agreed">
-										<label>
-											<div>
-												<input type="checkbox" name="poll_01">
-												<div class="checkbox_custom"></div>
-											</div>
-											<span>Не знаю</span>
-										</label>
-									</div>
+						<div class="event_registration_container">
+							<form id="event_registration">
+								<span id="toogle_fix"></span>
+								<div class="event_registration_inputs_container">
 									<label>
-									<label>
-										<input name="poll_02" type="radio">хочу</label>
-									<label><input name="poll_02" type="radio">не хочу
+										<legend>Текст перед анкетой регистрации</legend>
+										<textarea type="text" placeholder="Введите текст"></textarea>
 									</label>
+									<label>
+										<legend>Вопросы анкеты*</legend>
+										<label><span class="event_registration_input_title">E-mail</span><input type="text" placeholder="Произвольный ответ"></label>
+									</label>
+									<label>
+										<label><span class="event_registration_input_title">Фамилия</span><input type="text" placeholder="Произвольный ответ"></label>
+									</label>
+									<label>
+										<label><span class="event_registration_input_title">Имя</span><input type="text" placeholder="Произвольный ответ"></label>
 									</label>
 								</div>
-							</div>
-							<a class="btn top_20" type="button">Вернуться</a>
-							<a class="btn top_20" type="button">Продолжить</a>
-						</form>
+								<div class="event_registration_select">
+									<span class="event_registration_select_title">Добавить вопрос</span>
+									<div class="event_registration_select_container event_registration_select_container_vdwn">
+									</div>
+									<div class="event_registration_select_data">
+										<label>
+											<div class="event_registration_select_data_line">
+												<legend>Текст вопроса</legend>
+												<input type="text"/>
+											</div>
+										</label>
+										<label>
+											<div class="event_registration_select_data_line top_10">
+												<legend>Комментарий к вопросу</legend>
+												<input type="text"/>
+											</div>
+											<div class="user_agreed top_10">
+												<label>
+													<div>
+														<input type="checkbox">
+														<div class="checkbox_custom"></div>
+													</div>
+													<span>Ответ на вопрос обязателен</span>
+												</label>
+											</div>
+										</label>
+										<label class="top_10">
+											<legend>Тип ответа</legend>
+											<label><input name="event_registration_custom_answer_type" type="radio">Произвольный ответ</label>
+											<label><input name="event_registration_custom_answer_type" type="radio">Выбор одного варианта</label>
+											<label><input name="event_registration_custom_answer_type" type="radio">Выбор нескольких вариантов ответа</label>
+											<label><input name="event_registration_custom_answer_type" type="radio">Номер телефона</label>
+											<a class="btn_grey top_10">Сохранить вопрос</a>
+										</label>
+									</div>
+								</div>
+							</form>
+							<a class="btn top_20" href="event_info.html">Вернуться</a>
+							<a class="btn top_20" href="event_tickets.html">Продолжить</a>
+						</div>
 					</div>
-				</div>
+				<div class="clearfix"></div>
 			</div>
 		</div>
 		<footer>

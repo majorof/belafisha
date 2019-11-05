@@ -253,6 +253,38 @@ $('.questionnaire_select_container').on('click',function() {
     $('.event_info_date_time_clone').on('click',function() {
         $("#event_info_date_time").clone().addClass('top_10').appendTo('.event_info_date_time_cloning');
       });
+	  
+	  //Регистрация на событие
+	  
+		$('.event_registration_select_container').on('click',function() {
+			if($(this).next().is(':hidden') && $('#cbx').is(':checked')) {
+				$(this).next().fadeIn();
+				$(this).addClass('event_registration_select_container_vup');
+				$(this).removeClass('event_registration_select_container_vdwn');
+			} else {
+				$(this).next().fadeOut();
+				$(this).addClass('event_registration_select_container_vdwn');
+				$(this).removeClass('event_registration_select_container_vup');
+			}
+		});
+		
+		$('#cbx').on('change', function() {
+			if($('#toogle_fix').is(':visible')) {
+				$('#event_registration').addClass('disabled_color');
+				$('#event_registration').find('textarea').prop('disabled', 'true').attr('class','manager_content_container_inputs_disabled');
+				$('#event_registration').find('input').prop('disabled', 'true').attr('class','manager_content_container_inputs_disabled');
+				$('#event_registration').find('.event_registration_select_container').addClass('manager_content_container_inputs_disabled');
+				$('#toogle_fix').fadeOut();
+			} else {
+				$('#event_registration').removeClass('disabled_color');
+				$('#event_registration').find('textarea').removeAttr('disabled').removeAttr('class','manager_content_container_inputs_disabled');
+				$('#event_registration').find('input').removeAttr('disabled').removeAttr('class','manager_content_container_inputs_disabled');
+				$('#event_registration').find('.event_registration_select_container').removeClass('manager_content_container_inputs_disabled');				
+				$('#event_registration').find('.manager_content_container_inputs_disabled').addClass('event_registration_select_container');
+				$('#toogle_fix').fadeIn();
+			}
+
+		});		
 
 //Общее
 
