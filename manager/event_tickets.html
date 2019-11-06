@@ -27,6 +27,7 @@
 <script type="text/javascript" src="../js/datepicker.min.js"></script>
 <script type="text/javascript" src="../js/panzoom.js"></script>
 <script type="text/javascript" src="../js/select2.min.js"></script>
+<script type="text/javascript" src="../js/select2.min.js"></script>
 
 </head>
 <body id="user">
@@ -243,91 +244,129 @@
 				</div>
 		</div>
 		<div class="manager_content_container">
-			<div class="container_950 overflow_hidden">
-				<div class="wrapper">
+			<div class="container_950">
+
 					<div class="grid_19">
 						<ol class="manager_second_line_menu">
-							<li class="active"><a href="event_info.html">Информация</a></li>
+							<li><a href="event_info.html">Информация</a></li>
 							<li><a href="event_registration.html">Регистрация</a></li>
-							<li><a href="event_tickets.html">Билеты</a></li>
+							<li class="active"><a href="event_tickets.html">Билеты</a></li>
 							<li><a href="event_publications_config.html">Настройки&nbsp;публикации</a></li>
 						</ol>
 						<div class="clearfix"></div>
-						<h2>Создание события</h2>
+						<h2>Категории билетов без рассадки</h2>
 					</div>
-					<div class="grid_9">
-						<form>
-							<label>
-								<legend>Название*</legend>
-								<input type="text" placeholder="Новое событие"/>
-							</label>
-							<label>
-								<legend>Описание события</legend>
-								<textarea type="text" placeholder="Введите текст"></textarea>
-							</label>
-							<div class="event_info_date_time_container top_10">
-								<div class="event_info_date_time_cloning">
-									<div id="event_info_date_time" class="event_info_date_time">
-										<input type="text" class="datepicker-here" data-timepicker="true" placeholder="01.01.1970 __:__" />
-										<input type="text" class="datepicker-here" data-timepicker="true" placeholder="01.01.1970 __:__" />
+					<div class="clearfix"></div>
+					<div class="grid_12">
+						<div class="event_registration_container">
+							<div class="manager_finance_block">
+								<div class="event_tickets_categories_wo_block">
+									<div><p>Название билета</p></div>
+									<div><p>Кол-во</p></div>
+									<div><p>Цена</p></div>
+									<div><p>Статус</p></div>
+								</div>
+								<div class="etcwo_cloning">
+									<div id="etcwo_clone" class="event_tickets_categories_wo_block top_10">
+										<div><input type="text" placeholder="Входной билет" /></div>
+										<div><input type="text" /></div>
+										<div><input type="text" /></div>
+										<div><input type="text" /></div>
 									</div>
 								</div>
-								<div class="event_info_date_time_clone"></div>
-								<p class="event_info_date_time_description">Поставьте произвольную дату в будущем, если событие с открытой датой</p>
+								<a class="event_tickets_categories_wo_block_add">Добавить категорию</a>
 							</div>
-							<label>
-								<legend>Город*</legend>
-								<input type="text" />
-								<div class="user_agreed">
-									<label>
-										<div>
-											<input type="checkbox" />
-											<div class="checkbox_custom"></div>
-										</div>
-										<span>У события может не быть города</span>
-									</label>
+							<div class="manager_finance_block top_10">
+								<div class="event_tickets_categories_wo_block">
+									<div><p>Промокод</p></div>
+									<div><input type="text" /></div>
+									<div><p>По одному коду на строчку. Использованные промокоды будут пропадать из этого списка. Используйте только буквы латинского алфавита и цифры.</p></div>
 								</div>
-							</label>
-							<label>
-								<legend>Категория события*</legend>
-								<select class="event_info_select" name="event_info_event_category">
-								  <option value="">Театр</option>
-								  <option value="">Концерт</option>
-								  <option value="">Фестиваль</option>
-								  <option value="">Кино</option>
-								  <option value="">Другое</option>
-								</select>
-							</label>
-							<label>
-								<legend>Афиша события</legend>
-								<input class="manager_file_input" type="file">
-								<div class="f_name">Выбрать изображение</div>
-								<p class="manager_file_input_description">Используйте файлы формата .png .jpg .gif  размер 248*351</p>
-							</label>
-							<label>
-								<legend>Фотографии события</legend>
-								<input class="manager_file_input" type="file">
-								<div class="f_name">Выбрать изображение</div>
-								<p class="manager_file_input_description">Используйте файлы формата .png .jpg .gif</p>
-							</label>
-							<label>
-								<legend>Видео события</legend>
-								<input type="text" />
-								<p class="manager_file_input_description">Вставьте ссылку на видео на YouTube</p>
-							</label>
-							<div class="user_agreed top_20">
+							</div>
+							<h2>Билеты с рассадкой</h2>
+							<div class="your_events_block top_10">
+								<p>Хотите, чтобы ваши участники имели возможность выбрать места в зале, где вы будете проводить событие? Прочтите нашу короткую инструкцию и добавьте к вашему событию интерактивную схему мест или воспользуйтесь имеющимися схемами, и вы сможете продавать билеты с указанием места в зале, а ваши участники смогут удобно и наглядно их выбирать при покупке.</p>
+							</div>
+							<a class="btn_grey">Добавить интерактивную схему</a>
+							<a class="btn_grey">Инструкция</a>
+							<a class="btn_grey">Архив схем</a>
+							<div class="clearfix"></div>
+							<a class="event_tickets_additional_config event_tickets_additional_config_vdwn">Дополнительные настройки</a>
+							<form id="event_tickets">
 								<label>
-									<div>
-										<input type="checkbox" checked="">
-										<div class="checkbox_custom"></div>
-									</div>
-									<span>Я согласен на обработку персональных данных</span>
+									<legend>Срок брони билета</legend>
+									<input type="text" class="event_tickets_grey_input" />
+									<span class="event_tickets_grey_input_mean">мин.</span>
+									<p>Количество минут, в течение которого участник может оплатить билет. По истечении этого времени бронь снимается, а билет возвращается в число доступных. Если регистрация на событие не закрылась, по индивидуальной ссылке на оплату участник может перебронировать билет.</p>
 								</label>
-							</div>
-							<a href="event_registration.html" class="btn top_20">Продолжить</a>
-						</form>
+								<label>
+									<legend>Максимальное количество доступных билетов</legend>
+									<input type="text" class="event_tickets_grey_input" />
+									<span class="event_tickets_grey_input_mean">билетов</span>
+									<label>
+										<div class="user_agreed">
+											<label>
+												<div>
+													<input type="checkbox">
+													<div class="checkbox_custom"></div>
+												</div>
+												<span>Не ограничено</span>
+											</label>
+										</div>
+									</label>
+									<p>Максимальное количество человек, которые могут посетить событие. При достижении этого количества регистрация на событие закроется, даже если будут открытыми категории регистрации. Поставьте 0, чтобы снять ограничение. Учитывается количество как оплаченных, так и забронированных билетов.</p>
+								</label>
+								<label>
+									<label>
+										<div class="user_agreed">
+											<label>
+												<div>
+													<input type="checkbox">
+													<div class="checkbox_custom"></div>
+												</div>
+												<span>Оплата от юридических лиц</span>
+											</label>
+										</div>
+									</label>
+									<p>Оплата по договору со счета компании. Весь документооборот ведет за вас МояАфиша.</p>
+									<p class="event_tickets_colored">При оплате от юридического лица взимается комиссия по вашему тарифу, но не менее 300 рублей за каждый заказ.</p>
+								</label>
+								<label>
+									<label>
+										<div class="user_agreed">
+											<label>
+												<div>
+													<input type="checkbox">
+													<div class="checkbox_custom"></div>
+												</div>
+												<span>Оплата в рассрочку</span>
+											</label>
+										</div>
+									</label>
+									<p>Позволяет участнику купить билет сразу, а не откладывать решение на потом. Первый месяц участник проценты за кредит не платит.</p>
+									<p class="event_tickets_colored">При отмене или переносе события организатор обязан компенсировать участнику затраты на покупку билета, включая фактически выплаченные проценты по кредиту.</p>
+								</label>
+								<label>
+									<label>
+										<div class="user_agreed">
+											<label>
+												<div>
+													<input type="checkbox">
+													<div class="checkbox_custom"></div>
+												</div>
+												<span>Оплата в рассрочку</span>
+											</label>
+										</div>
+									</label>
+									<p>Возможность покупать и оплачивать  только по одному билету на одного пользователя. После подключения в форме регистрации исчезнет поле с выбором количества билетов.</p>
+								</label>
+							</form>
+							<div class="clearfix"></div>
+							<a class="btn top_20" href="event_info.html">Вернуться</a>
+							<a class="btn top_20" href="event_tickets.html">Продолжить</a>
+						</div>
 					</div>
-				</div>
+				<div class="clearfix"></div>
 			</div>
 		</div>
 		<footer>

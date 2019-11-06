@@ -169,10 +169,10 @@ $(document).ready(function() {
     $zoomRange: $section.find('.zoom-range'),
     $reset: $section.find('.reset'),
     cursor: 'pointer',
-    startTransform: 'scale(0.8)',
+    startTransform: 'scale(1)',
     maxScale: 2.2,
     increment: 0.1,
-    contain: false
+    contain: true
     }).panzoom('zoom', true);
   })();
 
@@ -190,12 +190,12 @@ $(document).ready(function() {
   });
 
   $(function(){
-        $("[data-original-title]").on('mousemove',function (eventObject) {
+        $("[data-original-title]").bind('mousemove',function (eventObject) {
             $data_tooltip = $(this).attr("data-original-title");
             $("#tooltip").html($data_tooltip)
                 .css({
-                  "top" : eventObject.pageY - 470,
-                  "left" : eventObject.pageX - 265
+					"top" : eventObject.pageY - 80,
+					"left" : eventObject.pageX - 58
                 })
                 .show();
             }).mouseout(function () {
@@ -284,7 +284,24 @@ $('.questionnaire_select_container').on('click',function() {
 				$('#toogle_fix').fadeIn();
 			}
 
-		});		
+		});
+
+		//Билеты
+		$('.event_tickets_additional_config').on('click',function() {
+			if($(this).next().is(':visible')) {
+				$(this).next().fadeOut();
+				$(this).addClass('event_tickets_additional_config_vdwn');
+				$(this).removeClass('event_tickets_additional_config_vup');				
+			} else {
+				$(this).next().fadeIn();
+				$(this).addClass('event_tickets_additional_config_vup');
+				$(this).removeClass('event_tickets_additional_config_vdwn');				
+			}
+		});
+		
+		$('.event_tickets_categories_wo_block_add').on('click',function() {
+			$("#etcwo_clone").clone().appendTo('.etcwo_cloning');
+		  });
 
 //Общее
 
