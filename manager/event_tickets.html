@@ -260,6 +260,10 @@
 					<div class="grid_12">
 						<div class="event_registration_container">
 							<div class="manager_finance_block">
+								<div class="manager_finance_block_config_btns">
+									<a class="manager_finance_block_promocode_config_btn"></a>
+									<a href="event_tickets.html" class="manager_finance_block_refresh_config_btn"></a>
+								</div>
 								<div class="event_tickets_categories_wo_block">
 									<div><p>Название билета</p></div>
 									<div><p>Кол-во</p></div>
@@ -271,16 +275,43 @@
 										<div><input type="text" placeholder="Входной билет" /></div>
 										<div><input type="text" /></div>
 										<div><input type="text" /></div>
-										<div><input type="text" /></div>
+										<div>
+											<select class="event_tickets_select" name="event_tickets_status">
+											  <option value="">Открыто</option>
+											  <option value="">Закрыто</option>
+											</select>
+										</div>
 									</div>
 								</div>
 								<a class="event_tickets_categories_wo_block_add">Добавить категорию</a>
 							</div>
-							<div class="manager_finance_block top_10">
-								<div class="event_tickets_categories_wo_block">
+							<div id="manager_finance_block_config" class="manager_finance_block top_10">
+								<div class="event_tickets_categories_wo_block_config">
 									<div><p>Промокод</p></div>
-									<div><input type="text" /></div>
+										<div>
+											<ul>
+												<li><label>
+													<input type="radio" value="1" name="event_tickets_promocode" checked />
+													<span>одноразовый</span>
+												</label><!--
+												--><label>
+													<input type="radio" value="1" name="event_tickets_promocode" />
+													<span>многоразовый</span>
+												</label></li>
+											<li><textarea></textarea></li>
+										</ul>
+									</div>
 									<div><p>По одному коду на строчку. Использованные промокоды будут пропадать из этого списка. Используйте только буквы латинского алфавита и цифры.</p></div>
+								</div>
+								<div class="event_tickets_categories_wo_block_config">
+									<div><p>Лимиты на заказ</p></div>
+									<div><span>от</span><input type="text" /><span>до</span><input type="text" /></div>
+									<div><p>Здесь можно установить максимальное и минимальное количество билетов данной категории, которое может быть в одном заказе. Максимум билетов.</p></div>
+								</div>
+								<div class="event_tickets_categories_wo_block_config">
+									<div><p>Комментарий</p></div>
+									<div><textarea></textarea></div>
+									<div><p>Текст будет отображаться под названием категории в списке билетов.</p></div>
 								</div>
 							</div>
 							<h2>Билеты с рассадкой</h2>

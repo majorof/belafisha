@@ -253,9 +253,9 @@ $('.questionnaire_select_container').on('click',function() {
     $('.event_info_date_time_clone').on('click',function() {
         $("#event_info_date_time").clone().addClass('top_10').appendTo('.event_info_date_time_cloning');
       });
-	  
+
 	  //Регистрация на событие
-	  
+
 		$('.event_registration_select_container').on('click',function() {
 			if($(this).next().is(':hidden') && $('#cbx').is(':checked')) {
 				$(this).next().fadeIn();
@@ -267,7 +267,7 @@ $('.questionnaire_select_container').on('click',function() {
 				$(this).removeClass('event_registration_select_container_vup');
 			}
 		});
-		
+
 		$('#cbx').on('change', function() {
 			if($('#toogle_fix').is(':visible')) {
 				$('#event_registration').addClass('disabled_color');
@@ -279,7 +279,7 @@ $('.questionnaire_select_container').on('click',function() {
 				$('#event_registration').removeClass('disabled_color');
 				$('#event_registration').find('textarea').removeAttr('disabled').removeAttr('class','manager_content_container_inputs_disabled');
 				$('#event_registration').find('input').removeAttr('disabled').removeAttr('class','manager_content_container_inputs_disabled');
-				$('#event_registration').find('.event_registration_select_container').removeClass('manager_content_container_inputs_disabled');				
+				$('#event_registration').find('.event_registration_select_container').removeClass('manager_content_container_inputs_disabled');
 				$('#event_registration').find('.manager_content_container_inputs_disabled').addClass('event_registration_select_container');
 				$('#toogle_fix').fadeIn();
 			}
@@ -287,21 +287,31 @@ $('.questionnaire_select_container').on('click',function() {
 		});
 
 		//Билеты
+    $('.manager_finance_block_promocode_config_btn').on('click',function() {
+			if($('#manager_finance_block_config').is(':visible')) {
+				$('#manager_finance_block_config').fadeOut();
+			} else {
+				$('#manager_finance_block_config').fadeIn();
+			}
+		});
+
 		$('.event_tickets_additional_config').on('click',function() {
 			if($(this).next().is(':visible')) {
 				$(this).next().fadeOut();
 				$(this).addClass('event_tickets_additional_config_vdwn');
-				$(this).removeClass('event_tickets_additional_config_vup');				
+				$(this).removeClass('event_tickets_additional_config_vup');
 			} else {
 				$(this).next().fadeIn();
 				$(this).addClass('event_tickets_additional_config_vup');
-				$(this).removeClass('event_tickets_additional_config_vdwn');				
+				$(this).removeClass('event_tickets_additional_config_vdwn');
 			}
 		});
-		
+
 		$('.event_tickets_categories_wo_block_add').on('click',function() {
 			$("#etcwo_clone").clone().appendTo('.etcwo_cloning');
-		  });
+    });
+
+      $('.event_tickets_select').select2();
 
 //Общее
 

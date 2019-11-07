@@ -586,18 +586,41 @@ header{height:116px;}
 		.event_tickets_additional_config:before{content:'';display:inline-block;vertical-align:middle;background:url(../img/event_ticketsadditional_config_icon.png) center center no-repeat;width:20px;height:20px;margin-right:5px;}
 		.event_tickets_additional_config_vup:after{content:'';display:inline-block;vertical-align:middle;background:url(../img/expand_more.png) center center no-repeat;width:20px;height:20px;margin-left:5px;-ms-transform: rotate(180deg);-webkit-transform: rotate(180deg);-o-transform: rotate(180deg);-moz-transform: rotate(180deg);transform: rotate(180deg);}
 		.event_tickets_additional_config_vdwn:after{content:'';display:inline-block;vertical-align:middle;background:url(../img/expand_more.png) center center no-repeat;width:20px;height:20px;margin-left:5px;}
-		
+
 		.event_tickets_categories_wo_block{display: -webkit-flex; display: flex;-webkit-justify-content: space-around;justify-content: space-around;-webkit-align-items: flex-start;align-items: flex-start;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#000;}
 		.event_tickets_categories_wo_block div{display: -webkit-inline-flex;display: inline-flex; margin: 0 auto;-webkit-flex-basis: 25%; flex-basis: 25%;}
-		.event_tickets_categories_wo_block div input{background:#fff !important;bolder:0;}
+		.event_tickets_categories_wo_block div input{background:#fff !important;bolder:0;color:#000 !important;}
 		.event_tickets_categories_wo_block div:first-child input{width:90%;}
 		.event_tickets_categories_wo_block div:nth-child(2) input{width:50%;}
 		.event_tickets_categories_wo_block div:nth-child(3) input{width:50%;}
 		.event_tickets_categories_wo_block div:last-child input{width:80%;}
-		
+
+		.event_tickets_categories_wo_block_config{display: -webkit-flex; display: flex;-webkit-justify-content: space-around;justify-content: space-around;-webkit-align-items: flex-start;align-items: flex-start;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#000;margin-bottom: 10px;}
+    .event_tickets_categories_wo_block_config div{display: -webkit-inline-flex;display: inline-flex; margin: 0 auto;-webkit-flex-basis: 33%; flex-basis: 33%;}
+    .event_tickets_categories_wo_block_config div span{margin-right: 10px;}
+    .event_tickets_categories_wo_block_config input{background:#fff !important;bolder:0;color:#000 !important}
+    .event_tickets_categories_wo_block_config textarea{background:#fff !important;bolder:0;color:#000 !important}
+    .event_tickets_categories_wo_block_config div:first-child {width:90%;}
+    .event_tickets_categories_wo_block_config ul {list-style: none;width: 100%;}
+    .event_tickets_categories_wo_block_config div:nth-child(2) input{width:90%;margin-right: 20px;}
+    .event_tickets_categories_wo_block_config div:nth-child(2) input[type="radio"]:checked + span{background: #F69707;}
+
+    .event_tickets_categories_wo_block_config div ul li  {margin-bottom: 10px;}
+    .event_tickets_categories_wo_block_config div ul li label {font-size:10px !important;display: inline-block;box-sizing: border-box;cursor: pointer;}
+    .event_tickets_categories_wo_block_config div ul li label span{background: #fff;padding: 6px;}
+    .event_tickets_categories_wo_block_config div ul li label input{width:auto !important;display: block;}
+    .event_tickets_categories_wo_block_config div ul li label span{margin-right: 0;text-align: center;}
+    .event_tickets_categories_wo_block_config div:nth-child(2) textarea{width:90%;}
+
 		.event_tickets_categories_wo_block_add{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#000;display:inline-block;vertical-align:middle;cursor:pointer;}
 		.event_tickets_categories_wo_block_add:before{content:'+';font-family: 'Montserrat', sans-serif;font-weight:400;font-size:24px;color:#000;vertical-align:middle;display:inline-block;margin-right:5px;}
-		
+
+    .manager_finance_block_config_btns{position: absolute;top:0;right:0;padding: 10px;}
+    .manager_finance_block_promocode_config_btn{width: 14px;height: 14px;background:#F69707 url(../img/manager_finance_block_promocode_config_btn.png) center center no-repeat;display: inline-block;padding: 2px;cursor: pointer;}
+    .manager_finance_block_refresh_config_btn{width: 14px;height: 14px;background:#FF0000 url(../img/manager_finance_block_refresh_config_btn.png) center center no-repeat;display: inline-block;padding: 2px;cursor: pointer;}
+
+    #manager_finance_block_config{display: none;}
+
 		/* --> -->  Настройки события*/
 		.event_publications_config_container label>input[type="radio"]{width:14px !important;height: 14px !important;background: url(../img/radio_off.png) center center no-repeat !important;vertical-align: middle;margin-right: 5px;outline: none;border:0 !important;padding: 0 !important;}
 		.event_publications_config_container label>input[type="radio"]:checked{background: url(../img/radio_on.png) center center no-repeat !important;}
