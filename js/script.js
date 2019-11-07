@@ -172,7 +172,7 @@ $(document).ready(function() {
     startTransform: 'scale(1)',
     maxScale: 2.2,
     increment: 0.1,
-    contain: true
+    contain: false
     }).panzoom('zoom', true);
   })();
 
