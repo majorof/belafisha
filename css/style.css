@@ -9,6 +9,14 @@ input, textarea {
 -webkit-border-radius: 0;
 }
 
+input::-ms-clear {
+    display: none;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration { display: none; }
+
 button:active, button:focus {
   outline: none;
 }
@@ -238,11 +246,12 @@ header{height:116px;}
 
 	.catalog_playground_container {width:550px;box-sizing:border-box;padding-bottom:20px !important;height:390px;overflow:hidden;}
 	.catalog_playground_input_container input{width:100%;height:30px;background: #fff;border: .75px solid #F69707;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:11px;color:#464545;padding-left: 10px;box-sizing:border-box;}
-	.catalog_playgrounds_values {display: -ms-flexbox;display: flex;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-ms-flex-pack: distribute;justify-content: space-around;-ms-flex-align: stretch;align-items: stretch;-ms-flex-line-pack: stretch;align-content: stretch;padding: 10px 0;max-height:250px;}
-	.catalog_playgrounds_values ul{width:50%;list-style: none;padding-right:40px;}
+	.catalog_playgrounds_values {display: -ms-flexbox;display: flex;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-ms-flex-pack: distribute;justify-content: space-around;-ms-flex-align: stretch;align-items: stretch;-ms-flex-line-pack: stretch;align-content: stretch;padding: 10px 0;height:250px;width:100%;}
+	.catalog_playgrounds_values ul{width:50%;list-style: none;padding-right:40px;height:auto;}
 	.catalog_playgrounds_values ul>li{display:list-item;}
 	.catalog_playgrounds_values ul li p:first-child{padding:0 5px;font-weight: 600;font-size: 14px;}
 	.catalog_playgrounds_values a{padding:0 5px 5px 5px;cursor:pointer;}
+	.catalog_playgrounds_values a.active{border-bottom:1px solid #F69707;}
 	.catalog_playgrounds_values a:hover{border-bottom:1px solid #F69707;}
 	.catalog_playground_input_container{width:54%;padding:20px 0;position:relative;}
 
@@ -350,7 +359,7 @@ header{height:116px;}
 	/*Холл*/
 	.hall_container{padding: 20px 80px 20px 45px;background: rgba(11,15,24,0.6);border: 1px solid #F69707;box-sizing: border-box;}
 	.hall_container_questionaire{padding: 20px 45px;background: rgba(11,15,24,0.6);border: 1px solid #F69707;box-sizing: border-box;}
-	.hall_svg {width: 100%;overflow: hidden;margin-bottom:30px;}
+	.hall_svg {width: auto;min-width:823px;overflow: hidden;margin-bottom:30px;}
 	.hall_svg_container{position: relative;margin-top: 40px;}
 	.hall_svg_nav{position: absolute;right:-50px;}
 	.hall_svg_nav a{width: 28px;height: 28px;display: block;padding: 6px;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:36px;color:#fff;text-align: center;cursor: pointer;border-radius: 6px;}
@@ -361,10 +370,10 @@ header{height:116px;}
 	.hall_svg_nav a:nth-child(1){background: rgba(0, 0, 0, 0.5); }
 	.hall_svg_nav a:nth-child(2){background: rgba(246, 151, 7, 0.5);margin-top: 5px;}
 	.hall_svg_nav a:nth-child(3){background: rgba(255, 255, 255, 0.5);margin-top: 5px;}
-	.hall_svg svg{width: 100%;display: block;}
+	.hall_svg svg{width: 100%;display: block;min-width:823px;}
 	.hall_title_left{width: 250px;float: left;vertical-align: top;}
 	.hall_title_right{width: 200px;float: right;vertical-align: top;}
-	.hall_title{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:11px;color:#fff;display: flow-root;}
+	.hall_title{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:11px;color:#fff;display: block;}
 	.hall_title_left p:nth-child(2)>span:nth-child(n){display: inline-block;vertical-align: top;margin-right: 5px;}
 	.hall_title_left p:nth-child(2)>span:nth-child(2)>span{display: block;}
 	.hall_title_left p:nth-child(2)>span:nth-child(1), .hall_title_left p:nth-child(2)>span:nth-child(3){font-size:22px;font-weight: 500;}
@@ -423,7 +432,7 @@ header{height:116px;}
 	/*Корзина*/
 	.cart_container {position: relative;background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);}
 	.cart_container h2{padding: 10px 0;text-align: left;}
-	.cart_tickets_container{width:100%;padding: 10px;background: #1C1B2F;border:1px solid #C4C4C4;box-sizing: border-box;}
+	.cart_tickets_container{width:100%;padding: 10px;background: #1C1B2F;border:1px solid #C4C4C4;box-sizing: border-box;margin-bottom:10px;}
 	.cart_tickets_info_block{margin-bottom: 30px;position: relative;}
 	.cart_tickets_info_block a{position: absolute;top:0;right: 0;width:12px;height: 12px;background: url(../img/tickets_close.png) center center no-repeat;cursor: pointer;}
 	.cart_tickets_info_block p, .cart_tickets_info_block ul{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:14px;line-height: 28px;color:#fff;}
@@ -474,7 +483,7 @@ header{height:116px;}
 	.manager_file_input_description{font-size: 10px !important;}
 	.manager_content_container textarea{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 18px;border: 0.7px solid #C4C4C4;box-sizing: border-box;width:100%;height: 120px;padding: 10px;}
 	.manager_content_container .btn{float: left;}
-	.manager_withdraw {position: relative;;}
+	.manager_withdraw {position: relative;display:block;}
 	.manager_withdraw p{position: absolute;top:32px;left: 150px;}
 	.manager_withdraw input{width:178px !important;}
 	.manager_finance_block{background: #C4C4C4;border: 1px solid #C4C4C4;padding: 10px;box-sizing: border-box;position: relative;}
@@ -596,30 +605,32 @@ header{height:116px;}
 		.event_tickets_categories_wo_block div:last-child input{width:80%;}
 
 		.event_tickets_categories_wo_block_config{display: -webkit-flex; display: flex;-webkit-justify-content: space-around;justify-content: space-around;-webkit-align-items: flex-start;align-items: flex-start;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#000;margin-bottom: 10px;}
-    .event_tickets_categories_wo_block_config div{display: -webkit-inline-flex;display: inline-flex; margin: 0 auto;-webkit-flex-basis: 33%; flex-basis: 33%;}
-    .event_tickets_categories_wo_block_config div span{margin-right: 10px;}
-    .event_tickets_categories_wo_block_config input{background:#fff !important;bolder:0;color:#000 !important}
-    .event_tickets_categories_wo_block_config textarea{background:#fff !important;bolder:0;color:#000 !important}
-    .event_tickets_categories_wo_block_config div:first-child {width:90%;}
-    .event_tickets_categories_wo_block_config ul {list-style: none;width: 100%;}
-    .event_tickets_categories_wo_block_config div:nth-child(2) input{width:90%;margin-right: 20px;}
-    .event_tickets_categories_wo_block_config div:nth-child(2) input[type="radio"]:checked + span{background: #F69707;}
+		.event_tickets_categories_wo_block_config div{display: -webkit-inline-flex;display: inline-flex; margin: 0 auto;-webkit-flex-basis: 33%; flex-basis: 33%;}
+		.event_tickets_categories_wo_block_config div span{margin-right: 10px;}
+		.event_tickets_categories_wo_block_config input{background:#fff !important;bolder:0;color:#000 !important}
+		.event_tickets_categories_wo_block_config textarea{background:#fff !important;bolder:0;color:#000 !important}
+		.event_tickets_categories_wo_block_config div:first-child {}
+		.event_tickets_categories_wo_block_config div:nth-child(2) {min-width:33%;}
+		.event_tickets_categories_wo_block_config div:nth-child(3) {min-width:33%;}
+		.event_tickets_categories_wo_block_config ul {list-style: none;width: 100%;}
+		.event_tickets_categories_wo_block_config div:nth-child(2) input{width:90%;margin-right: 20px;}
+		.event_tickets_categories_wo_block_config div:nth-child(2) input[type="radio"]:checked + span{background: #F69707;}
 
-    .event_tickets_categories_wo_block_config div ul li  {margin-bottom: 10px;}
-    .event_tickets_categories_wo_block_config div ul li label {font-size:10px !important;display: inline-block;box-sizing: border-box;cursor: pointer;}
-    .event_tickets_categories_wo_block_config div ul li label span{background: #fff;padding: 6px;}
-    .event_tickets_categories_wo_block_config div ul li label input{width:auto !important;display: block;}
-    .event_tickets_categories_wo_block_config div ul li label span{margin-right: 0;text-align: center;}
-    .event_tickets_categories_wo_block_config div:nth-child(2) textarea{width:90%;}
+		.event_tickets_categories_wo_block_config div ul li  {margin-bottom: 10px;}
+		.event_tickets_categories_wo_block_config div ul li label {font-size:10px !important;display: inline-block;box-sizing: border-box;cursor: pointer;}
+		.event_tickets_categories_wo_block_config div ul li label span{background: #fff;padding: 6px;}
+		.event_tickets_categories_wo_block_config div ul li label input{width:auto !important;display: block;}
+		.event_tickets_categories_wo_block_config div ul li label span{margin-right: 0;text-align: center;}
+		.event_tickets_categories_wo_block_config div:nth-child(2) textarea{width:90%;}
 
 		.event_tickets_categories_wo_block_add{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#000;display:inline-block;vertical-align:middle;cursor:pointer;}
 		.event_tickets_categories_wo_block_add:before{content:'+';font-family: 'Montserrat', sans-serif;font-weight:400;font-size:24px;color:#000;vertical-align:middle;display:inline-block;margin-right:5px;}
 
-    .manager_finance_block_config_btns{position: absolute;top:0;right:0;padding: 10px;}
-    .manager_finance_block_promocode_config_btn{width: 14px;height: 14px;background:#F69707 url(../img/manager_finance_block_promocode_config_btn.png) center center no-repeat;display: inline-block;padding: 2px;cursor: pointer;}
-    .manager_finance_block_refresh_config_btn{width: 14px;height: 14px;background:#FF0000 url(../img/manager_finance_block_refresh_config_btn.png) center center no-repeat;display: inline-block;padding: 2px;cursor: pointer;}
+		.manager_finance_block_config_btns{position: absolute;top:0;right:0;padding: 10px;}
+		.manager_finance_block_promocode_config_btn{width: 14px;height: 14px;background:#F69707 url(../img/manager_finance_block_promocode_config_btn.png) center center no-repeat;display: inline-block;padding: 2px;cursor: pointer;}
+		.manager_finance_block_refresh_config_btn{width: 14px;height: 14px;background:#FF0000 url(../img/manager_finance_block_refresh_config_btn.png) center center no-repeat;display: inline-block;padding: 2px;cursor: pointer;}
 
-    #manager_finance_block_config{display: none;}
+		#manager_finance_block_config{display: none;}
 
 		/* --> -->  Настройки события*/
 		.event_publications_config_container label>input[type="radio"]{width:14px !important;height: 14px !important;background: url(../img/radio_off.png) center center no-repeat !important;vertical-align: middle;margin-right: 5px;outline: none;border:0 !important;padding: 0 !important;}
@@ -740,6 +751,13 @@ footer{background:#000;padding:30px 0;border-top: 2px solid #F69707;}
     /* --> --> Договор */
     .manager_content_contract_confirmation_btns .btn{padding: 10px 5px;}
     .manager_content_contract_confirmation_btns_last_step .btn{padding: 10px 5px;font-size: 13px;}
+	
+	/* --> -->  Билеты*/
+	.event_tickets_categories_wo_block_config div ul li label{display:block;width: 90%;}
+	.event_tickets_categories_wo_block_config div ul li label span{box-sizing:border-box;display:block;width:100%;}
+	.event_tickets_categories_wo_block_config div span{margin-right: 5px;}
+	
+	.event_registration_container .btn_grey{padding: 10px 20px;font-size: 12px;}
 
 /*Подвал*/
 .footer_social_nav {width:84%;}
@@ -823,6 +841,13 @@ footer{background:#000;padding:30px 0;border-top: 2px solid #F69707;}
     /* --> --> Договор */
     .manager_content_contract_confirmation_btns .btn{padding: 10px;font-size: 12px;}
     .manager_content_contract_confirmation_btns_last_step .btn{padding: 10px;font-size: 11px;}
+	
+	/* --> -->  Билеты*/
+	.event_tickets_categories_wo_block_config div ul li label{display:block;width: 90%;}
+	.event_tickets_categories_wo_block_config div ul li label span{box-sizing:border-box;display:block;width:100%;}
+	.event_tickets_categories_wo_block_config div span{margin-right: 5px;}
+	
+	.event_registration_container .btn_grey{padding: 10px;font-size: 12px;}
 
 /*Подвал*/
 .page_up{display:none;}
@@ -977,65 +1002,73 @@ header{height:50px;background:#000;position:relative;}
 	.event_page_feedbacks_container{margin:0 30px;}
 	.event_page_feedbacks_form_container{margin:0 30px;}
 
-  /* --> Страница организатора */
-  .organizer_page_organizer_info ul li:first-child {width: 100px;}
-  .organizer_page_organizer_info{width:auto;min-width:420px;margin:0 auto;padding:0 30px;}
-  .organizer_page_organizer_info ul li:nth-child(2){width:300px;margin-left:15px;}
+	/* --> Страница организатора */
+	.organizer_page_organizer_info ul li:first-child {width: 100px;}
+	.organizer_page_organizer_info{width:auto;min-width:420px;margin:0 auto;padding:0 30px;}
+	.organizer_page_organizer_info ul li:nth-child(2){width:300px;margin-left:15px;}
 	.organizer_page_organizer_info ul>li>p>img{width:100%;}
-  .organizer_page_organizer_btns_container{width:auto;margin:0 auto;float:none;padding:0 30px;}
-  .organizer_page_organizer_btns_container div{display:inline-block;}
-  .organizer_page_organizer_info ul>li>p{font-size:16px;line-height:24px;}
+	.organizer_page_organizer_btns_container{width:auto;margin:0 auto;float:none;padding:0 30px;}
+	.organizer_page_organizer_btns_container div{display:inline-block;}
+	.organizer_page_organizer_info ul>li>p{font-size:16px;line-height:24px;}
 	.organizer_page_organizer_info ul>li>p.organizer_title{font-size:18px;}
 
-  .organizer_page_description_container{padding:0 30px;}
-  .organizer_page_description p{font-size: 16px;line-height: 24px;}
+	.organizer_page_description_container{padding:0 30px;}
+	.organizer_page_description p{font-size: 16px;line-height: 24px;}
 
 	/* --> Каталог*/
 	.catalog_description p{font-size:16px;line-height:28px;padding:0 30px;}
 	.popular_events{background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);position:relative;}
 	.catalog_filter_container{padding:0 30px;box-sizing:border-box;position:relative;}
 	.catalog_playground_container{right:0;}
-  .catalog_filter_container ul, .filter_reset{display:none;}
-  .filter_mobile_events_amount{display: inline-block;line-height: 40px;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:14px;color:#fff;}
-  .filter_mobile_btn{background: url(../img/filter_mobile_icon.png) center center no-repeat;display: inline-block;float: right;width: 40px;height: 40px;cursor: pointer;}
+	.catalog_filter_container ul, .filter_reset{display:none;}
+	.filter_mobile_events_amount{display: inline-block;line-height: 40px;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:14px;color:#fff;}
+	.filter_mobile_btn{background: url(../img/filter_mobile_icon.png) center center no-repeat;display: inline-block;float: right;width: 40px;height: 40px;cursor: pointer;}
 
-  .popup_filter{position:fixed;background: rgba(0, 0, 0, 1) none repeat scroll 0 0 / cover;height: 100%;overflow: hidden;width: 100%;z-index: 999;display: table;}
-  .popup_filter_container{display: table-cell;vertical-align: middle;}
-  .popup_filter_position{width:100%;padding:45px;box-sizing:border-box;min-width:320px;margin:0 auto;background:transparent;position:relative;}
-  .popup_filter_close{background:url(../img/login_close.png) center center no-repeat;width:30px;height:30px;position:absolute;top:-30px;right:45px;cursor:pointer;z-index:1;}
-  .popup_show_filter{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:24px;line-height: 48px;color:#fff;display: block;text-align: center;cursor: pointer;}
-  .popup_filter_val{border-bottom: 1px solid #F69707;padding-bottom: 20px;width:60%;margin:0 auto;}
-  .popup_filter_genre label{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:16px;line-height: 24px;color:#fff;display: inline-block;text-align: center;cursor: pointer;position: relative;padding: 0 5px;}
-  .popup_filter_genre li{text-align: center;}
-  .popup_filter_genre .inpt_chck{display: none;}
-  .inpt_chck:checked + .popup_filter_genre label {color: #F69707;}
-  .popup_filter_val>div{position: relative;}
-  .popup_filter_val>div input{width:100%;background: transparent;border: 1px solid #C4C4C4;box-sizing: border-box;height:40px;padding: 10px;color:#fff;font-size: 16px;}
-  .popup_filter_playgrounds_list span{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#fff;}
-  .popup_filter_reset{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 48px;color:#fff;cursor: pointer;text-align: center;display: block;}
-  .popup_filter .btn{width:60%;}
+	.popup_filter{position:fixed;background: rgba(0, 0, 0, 1) none repeat scroll 0 0 / cover;height: 100%;overflow: hidden;width: 100%;z-index: 999;display: table;}
+	.popup_filter_container{display: table-cell;vertical-align: middle;}
+	.popup_filter_position{width:100%;padding:45px;box-sizing:border-box;min-width:320px;margin:0 auto;background:transparent;position:relative;}
+	.popup_filter_close{background:url(../img/login_close.png) center center no-repeat;width:30px;height:30px;position:absolute;top:-30px;right:45px;cursor:pointer;z-index:1;}
+	.popup_show_filter{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:24px;line-height: 48px;color:#fff;display: block;text-align: center;cursor: pointer;}
+	.popup_filter_val{border-bottom: 1px solid #F69707;padding-bottom: 20px;width:60%;margin:0 auto;}
+	.popup_filter_genre label{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:16px;line-height: 24px;color:#fff;display: inline-block;text-align: center;cursor: pointer;position: relative;padding: 0 5px;}
+	.popup_filter_genre li{text-align: center;}
+	.popup_filter_genre .inpt_chck{display: none;}
+	.inpt_chck:checked + .popup_filter_genre label {color: #F69707;}
+	.popup_filter_val>div{position: relative;}
+	.popup_filter_val>div input{width:100%;background: transparent;border: 1px solid #C4C4C4;box-sizing: border-box;height:40px;padding: 10px;color:#fff;font-size: 16px;}
+	.popup_filter_playgrounds_list span{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;color:#fff;}
+	.popup_filter_reset{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:12px;line-height: 48px;color:#fff;cursor: pointer;text-align: center;display: block;}
+	.popup_filter .btn{width:60%;}
 
-  /* --> Страница пользователя*/
-  .user_content_container{position: relative;background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);width: auto;
-    min-width: 420px;margin: 0 auto;padding: 0 30px;}
-  .user_personal_recommends{width:80%;height:auto;margin: 0 auto;}
-  .user_menu_container{padding: 0 30px;box-sizing: border-box;}
+	/* --> Страница пользователя*/
+	.user_content_container{position: relative;background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);width: auto;
+	min-width: 420px;margin: 0 auto;padding: 0 30px;}
+	.user_personal_recommends{width:80%;height:auto;margin: 0 auto;}
+	.user_menu_container{padding: 0 30px;box-sizing: border-box;}
 
-  /* --> Холл*/
-  .hall_menu_fix{position: relative;background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);padding: 30px 0;}
-  .hall_container_questionaire{position: relative;width: auto;min-width: 420px;margin: 30px;}
-  #questionnaire{width:100%;}
+	/* --> Холл*/
+	.hall_menu_fix{position: relative;background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);padding: 30px 0;}
+	.hall_container_questionaire{position: relative;width: auto;min-width: 420px;margin: 30px;}
+	#questionnaire{width:100%;}
 
-  /* --> Корзина*/
-  .cart_container{position: relative;background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);width: auto;min-width: 420px;margin: 0 auto;padding: 0 30px;}
-  .cart_promocode ul{float: right;display: inline-block;}
+	/* --> Корзина*/
+	.cart_container{position: relative;background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);width: auto;min-width: 420px;margin: 0 auto;padding: 0 30px;}
+	.cart_promocode ul{float: right;display: inline-block;}
 
-  /* --> Кабинет организатора */
-  .manager_content_container{padding: 0 30px 50px;min-width: 420px;}
+	/* --> Кабинет организатора */
+	.manager_content_container{padding: 0 30px 50px;min-width: 420px;}
 
-  /* --> --> Договор */
-  .manager_content_contract_confirmation_btns .btn{padding: 10px 20px;}
-  .manager_content_contract_confirmation_btns_last_step .btn{padding: 10px 15px;}
+		/* --> --> Договор */
+		.manager_content_contract_confirmation_btns .btn{padding: 10px 20px;}
+		.manager_content_contract_confirmation_btns_last_step .btn{padding: 10px 15px;}
+	  
+		/* --> -->  Билеты*/
+		.event_tickets_categories_wo_block_config div ul li label{display:block;width: 90%;}
+		.event_tickets_categories_wo_block_config div ul li label span{box-sizing:border-box;display:block;width:100%;}
+		.event_tickets_categories_wo_block_config div span{margin-right: 5px;}
+
+		.event_registration_container .btn_grey{padding: 10px 20px;font-size: 12px;}
+		.event_tickets_categories_wo_block div:nth-child(2) input, .event_tickets_categories_wo_block div:nth-child(3) input{width:70%;}
 
 /*Подвал*/
 footer{overflow:hidden;}
@@ -1252,6 +1285,19 @@ header{height:50px;background:#000;position:relative;min-width:320px;}
     .manager_second_line_menu{font-size: 10px;}
     .manager_content_contract_confirmation_btns .btn{padding: 10px 2px;font-size: 10px;}
     .manager_content_contract_confirmation_btns_last_step .btn{padding: 10px 5px;font-size: 9px;}
+	
+		/* --> -->  Билеты*/
+		.event_tickets_categories_wo_block_config div ul li label{display:block;width: 90%;}
+		.event_tickets_categories_wo_block_config div ul li label span{box-sizing:border-box;display:block;width:100%;}
+		.event_tickets_categories_wo_block_config div span{margin-right: 5px;}
+
+		.event_registration_container .btn_grey{padding: 10px 20px;font-size: 12px;}
+		.event_tickets_categories_wo_block_config div:nth-child(3){display: none;}
+		.event_tickets_categories_wo_block_config div{flex-basis: 50%;}
+		
+		.etcwb_mobile_margin_fix{padding-top:25px;}
+		.event_tickets_categories_wo_block div{width: 25%;}
+		.event_tickets_categories_wo_block div:nth-child(2) input, .event_tickets_categories_wo_block div:nth-child(3) input{width:90%;}
 
 /*Подвал*/
 .footer_nav{display:none;}

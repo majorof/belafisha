@@ -105,3 +105,7 @@
 .select2-container--classic .select2-results__option--highlighted[aria-selected]{background-color:#3875d7;color:#fff;}
 .select2-container--classic .select2-results__group{cursor:default;display:block;padding:6px;}
 .select2-container--classic.select2-container--open .select2-dropdown{border-color:#5897fb;}
+
+@media screen and (max-width: 480px) {
+	.event_tickets_categories_wo_block .select2-container{width: 90% !important;}
+}

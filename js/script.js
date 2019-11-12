@@ -23,13 +23,17 @@ $(document).ready(function() {
       }
   });
 
-// Скрываем фильтры при клике на пустое место, не работает с датой
-//  $(document).on('click', function(e) {
-//    if (!$(e.target).closest('.catalog_filter_container').length) {
-//      $('.filter_val').fadeOut();
-//    }
-//    e.stopPropagation();
-//  });
+	// Скрываем фильтры при клике на пустое место, не работает с датой
+
+	jQuery(function($){
+		$(document).mouseup(function (e){ // событие клика по веб-документу
+			var div = $(".filter_val"); // тут указываем ID элемента
+			if (!div.is(e.target) // если клик был не по нашему блоку
+				&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+				div.fadeOut(); // скрываем его
+			}
+		});
+	});
 
 
 
@@ -51,9 +55,9 @@ $(document).ready(function() {
   });
 
   //Фильтр площадки
-	$(function() {
-		$(".catalog_playgrounds_values").niceScroll({
-			cursoropacitymin: 0.5,
+	$("#filter_playgrounds").click(function() {
+		$('#catalog_playgrounds_values').niceScroll({
+			cursoropacitymin: 1,
 			cursoropacitymax: 1,
 			cursorcolor:"#F69707",
 			cursorwidth: "5px",
@@ -61,8 +65,17 @@ $(document).ready(function() {
 			cursorborder: "0",
 			cursorborderradius: "5px",
 			});
+		$('#catalog_playgrounds_values').getNiceScroll().resize();
 	});
-
+	
+	$('#catalog_playgrounds_values').find('a').on('click',function() {
+		if($(this).hasClass('active')) {
+          $(this).removeClass('active');
+      } else {
+          $(this).addClass('active');
+      } 
+	});
+	
   //Мобильный фильтр
   $('.filter_mobile_btn').click (function() {
   	$('.popup_filter').fadeIn();
@@ -163,18 +176,32 @@ $(document).ready(function() {
   //  });
   (function() {
     var $section = $('#contain');
-    var $panzoom = $section.find('.panzoom').panzoom({
+    var $panzoom = $section.find('#zoom_it').panzoom({
     $zoomIn: $section.find('.zoom-in'),
     $zoomOut: $section.find('.zoom-out'),
     $zoomRange: $section.find('.zoom-range'),
     $reset: $section.find('.reset'),
     cursor: 'pointer',
     startTransform: 'scale(1)',
-    maxScale: 2.2,
-    increment: 0.1,
-    contain: false
+    maxScale: 3,
+	minScale: 1,
+	increment: 0.2,
+    contain: 'invert'
     }).panzoom('zoom', true);
+	
+	$panzoom.parent().on('mousewheel.focal', function( e ) {
+	  e.preventDefault();
+	  var delta = e.delta || e.originalEvent.wheelDelta;
+	  var zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
+	  $panzoom.panzoom('zoom', zoomOut, {
+		increment: 0.1,
+		focal: e
+	  });
+	}); 
+	
   })();
+  
+
 
   $('.hall_svg').find('rect').on('click',function() {
     location.href = "place_choose.html";
@@ -326,8 +353,19 @@ $('.questionnaire_select_container').on('click',function() {
     }
   });
 
+	//Закрываем календарь по клику вне
+	jQuery(function($){
+		$(document).mouseup(function (e){
+			var div = $(".calendar");
+			if (!div.is(e.target)
+				&& div.has(e.target).length === 0) {
+				div.fadeOut();
+			}
+		});
+	});
+
   $('div.datepicker-here').datepicker({
-      // Можно выбрать тольо даты, идущие за сегодняшним днем, включая сегодня
+      // Можно выбрать только даты, идущие за сегодняшним днем, включая сегодня
       minDate: new Date()
   });
 
