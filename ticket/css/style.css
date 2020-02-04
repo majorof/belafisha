@@ -1,0 +1,30 @@
+body {min-width:1200px;}
+.ticlet_header{background:url(../img/ticlet_header_bg.jpg) 0 0 no-repeat;height:177px;position:relative;}
+.ticlet_header .logo {padding:20px;box-sizing:border-box;width:429px;}
+.ticlet_header .fee {position:absolute;right:0;top:50%;margin-top:-37px;}
+.ticlet_header .fee p{font-family: 'Montserrat', sans-serif;font-weight:800;font-size:20px;padding:25px 15px;background:#fff;}
+
+.ticket_body{background:#fff;padding:50px;box-sizing:border-box;position:relative;}
+.ticket_body{font-family: 'Montserrat', sans-serif;}
+.ticket_body div:nth-child(n){margin-bottom:10px;}
+.ticket_e_ticket p{font-weight:400;font-size:28px;}
+.ticket_event_title p, .ticket_date span, .ticket_place_title p{font-weight:700;font-size:36px;}
+.ticket_sponsor p, .ticket_place_description p, .ticket_table td{font-weight:400;font-size:20px;}
+.ticket_date span{margin-right:50px;}
+.ticket_rules {margin-top:10px;}
+.ticket_rules p{font-weight:400;font-size:16px;margin-bottom:5px;}
+
+.ticket_advert ul {list-style:none;margin-top:50px;}
+.ticket_advert ul li{display:inline-block;width:49%;}
+
+.ticket_copyright p{text-align:center;font-weight:700;font-size:16px;margin-top:50px;}
+
+.ticket_table {position:relative;}
+.ticket_table_pics_container{position:absolute;top:0;right:0;}
+.ticket_table_pics_container p{display:inline-block;width:35%;margin-right:50px;}
+
+.ticket_table td{min-width:180px;}
+.ticket_table td:last-child{font-weight:600;}
+
+.zebra{position:absolute;top:50px;right:50px;}
+.zebra p{text-align:center;font-weight:500;font-size:16px;}
