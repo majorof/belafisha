@@ -21,7 +21,7 @@ body {min-width:1200px;}
 
 .ticket_table {position:relative;}
 .ticket_table_pics_container{position:absolute;top:0;right:0;}
-.ticket_table_pics_container p{display:inline-block;width:35%;margin-right:50px;}
+.ticket_table_pics_container p{display:inline-block;width:35%;margin-left:50px;}
 
 .ticket_table td{min-width:180px;}
 .ticket_table td:last-child{font-weight:600;}
