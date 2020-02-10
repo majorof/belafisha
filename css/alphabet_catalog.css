@@ -1,0 +1,14 @@
+.alphabet_catalog {padding:40px 0;background: linear-gradient(180deg, #182245 0%, #171B3C 19.79%, #161130 41.15%, #15021C 100%, #15021C 100%, #15021C 100%);
+    position: relative;}
+.alphabet_catalog_header{position:relative;width:50%;}
+.alphabet_catalog_header input{width:100%;height:45px;border:.75px solid #F69707;padding-left:10px;font-family: 'Montserrat', sans-serif;font-weight:400;font-size:14px;color:#766D6D;}
+
+.alphabet_catalog_body ul p{font-family: 'Montserrat', sans-serif;font-weight:700;font-size:19px;color:#fff;margin-top:25px;}
+.alphabet_catalog_body ul li {list-style:none;}
+.alphabet_catalog_body ul li a{font-family: 'Montserrat', sans-serif;font-weight:400;font-size:19px;color:#fff;margin-top:25px;display:block;text-decoration:none;-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;-o-transition: all 0.3s ease;transition: all 0.3s ease;}
+.alphabet_catalog_body ul li a:hover{color:#F69707;}
+
+@media screen and (max-width: 737px) {
+	.alphabet_catalog {padding:40px;}
+	.alphabet_catalog_header{width:100%;}
+}
